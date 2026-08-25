@@ -1,747 +1,1717 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Opportunité Canada accompagne les candidats dans leur projet professionnel et leur parcours vers le Canada avec une approche claire, structurée et transparente.">
-<title>Opportunité Canada  Votre projet commence ici</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <title>Immigration CND | Votre projet d'immigration au Canada</title>
 
-<link rel="stylesheet" href="style.css">
+    <meta name="description"
+          content="Immigration CND accompagne les candidats dans leur projet d'immigration au Canada : inscription, préparation de dossier, emploi, logement et accompagnement.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="topbar">
-  <div class="container">
-    <span><strong>Opportunité Canada</strong> · Immigration légale & projet professionnel</span>
-    <span>Informations claires · Parcours structuré · Accompagnement personnalisé</span>
-  </div>
-</div>
+<!-- =========================
+     HEADER
+========================= -->
 
-<header>
-  <div class="container nav">
-    <a class="brand" href="#accueil">
-      <span class="logo">OC</span>
-      <span class="brand-text"><b>Opportunité</b><small>CANADA</small></span>
-    </a>
+<header class="header" id="header">
 
-    <nav id="nav">
-      <a href="#accueil">Accueil</a>
-      <a href="#approche">Notre approche</a>
-      <a href="#opportunites">Opportunités</a>
-      <a href="#parcours">Parcours</a>
-      <a href="#offres">Formules</a>
-      <a href="#temoignages">Témoignages</a>
-      <a href="#faq">FAQ</a>
-    </nav>
+    <div class="container nav-container">
 
-    <div class="nav-actions">
-      <a class="login" href="#contact">Se connecter</a>
-      <button class="btn btn-primary" onclick="openAssessment()">Évaluer mon profil</button>
-      <button class="menu" id="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+        <a href="#home" class="logo">
+            <span class="logo-icon">🇨🇦</span>
+            <span>
+                Immigration
+                <strong>CND</strong>
+            </span>
+        </a>
+
+        <nav class="nav" id="nav">
+
+            <a href="#home">Accueil</a>
+            <a href="#jobs">Les emplois</a>
+            <a href="#services">Services</a>
+            <a href="#about">À propos</a>
+            <a href="#reviews">Témoignages</a>
+            <a href="#registration">Inscription</a>
+
+            <a href="https://wa.me/2290022335588"
+               target="_blank"
+               class="nav-whatsapp">
+                WhatsApp
+            </a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                type="button"
+                aria-label="Changer de thème">
+
+                <span id="themeIcon">🌙</span>
+            </button>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Ouvrir le menu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
     </div>
-  </div>
+
 </header>
+
 
 <main>
 
-<section class="hero" id="accueil">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow"><i></i> Votre projet Canada commence ici</span>
-      <h1>Construisez un projet <span>professionnel au Canada.</span></h1>
-      <p class="hero-copy">
-        Évaluez votre profil, découvrez les opportunités correspondant à vos compétences
-        et identifiez le parcours d'accompagnement adapté à votre situation.
-      </p>
+<!-- =========================
+     HERO
+========================= -->
 
-      <div class="hero-actions">
-        <button class="btn btn-primary" onclick="openAssessment()">Évaluer mon profil →</button>
-        <a class="btn btn-outline" href="#opportunites">Explorer les opportunités</a>
-      </div>
+<section class="hero" id="home">
 
-      <div class="hero-note">
-        <span><i class="check">✓</i> Parcours personnalisé</span>
-        <span><i class="check">✓</i> Informations transparentes</span>
-        <span><i class="check">✓</i> Données protégées</span>
-      </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                Votre projet canadien commence ici
+            </div>
+
+            <h1>
+                Réalisez votre projet
+                <span>d'immigration au Canada</span>
+            </h1>
+
+            <p class="hero-description">
+                Découvrez les possibilités d'emploi et bénéficiez
+                d'un accompagnement dans votre projet d'immigration
+                vers le Canada.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#registration" class="btn btn-primary">
+                    Commencer mon inscription
+                    <span>→</span>
+                </a>
+
+                <a href="#jobs" class="btn btn-outline">
+                    Découvrir les emplois
+                </a>
+
+            </div>
+
+            <div class="hero-info">
+
+                <div>
+                    <strong>30+</strong>
+                    <span>Opportunités</span>
+                </div>
+
+                <div>
+                    <strong>6</strong>
+                    <span>Services</span>
+                </div>
+
+                <div>
+                    <strong>24/7</strong>
+                    <span>Informations en ligne</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image-card">
+
+            <!-- PLACE POUR IMAGE -->
+            <div class="hero-image-placeholder">
+
+                <div class="placeholder-icon">🇨🇦</div>
+
+                <h3>Votre image ici</h3>
+
+                <p>
+                    Remplacez cet emplacement par
+                    l'image principale du projet.
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
-
-    <div class="hero-art">
-      <!-- Remplace cette image par la vraie photo/illustration fournie par le client -->
-      <img class="hero-photo"
-           src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1100&q=85"
-           alt="Voyage et projet professionnel vers le Canada">
-      <div class="photo-overlay"></div>
-
-      <div class="art-card top">
-        <div class="art-icon">🇨🇦</div>
-        <div><small>Destination</small><b>Canada</b></div>
-      </div>
-
-      <div class="art-card bottom">
-        <div class="art-icon">✓</div>
-        <div><small>Première étape</small><b>Évaluer votre profil</b></div>
-      </div>
-
-      <div class="hero-stat">
-        <strong>01</strong>
-        Commencez par votre profil
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="trust-strip">
-  <div class="container">
-    <div class="trust-item"><div class="trust-icon">✓</div><div><b>Information claire</b><span>Conditions présentées avant engagement</span></div></div>
-    <div class="trust-item"><div class="trust-icon">◎</div><div><b>Approche personnalisée</b><span>Votre parcours selon votre profil</span></div></div>
-    <div class="trust-item"><div class="trust-icon">↗</div><div><b>Opportunités ciblées</b><span>Métiers, secteurs et régions</span></div></div>
-    <div class="trust-item"><div class="trust-icon">⌁</div><div><b>Suivi structuré</b><span>Un parcours lisible à chaque étape</span></div></div>
-  </div>
-</section>
-
-<section class="section" id="approche">
-  <div class="container">
-    <div class="heading center">
-      <span class="label">Pourquoi OC</span>
-      <h2>Une démarche conçue autour de <span>votre projet.</span></h2>
-      <p>
-        Un projet d'immigration et d'emploi mérite plus qu'une simple promesse.
-        Notre approche met l'accent sur la compréhension du profil, la clarté des informations
-        et la préparation des prochaines étapes.
-      </p>
-    </div>
-
-    <div class="trust-cards">
-      <article class="card"><span class="num">01</span><div class="iconbox">◈</div><h3>Transparence</h3><p>Les prestations, conditions, coûts et limites de l'accompagnement sont présentés clairement.</p><a class="text-link" href="#faq">Notre engagement →</a></article>
-      <article class="card"><span class="num">02</span><div class="iconbox">◉</div><h3>Personnalisation</h3><p>Votre expérience, votre formation, vos compétences, vos langues et votre projet sont pris en compte.</p><a class="text-link" href="#questionnaire">Évaluer mon profil →</a></article>
-      <article class="card"><span class="num">03</span><div class="iconbox">⌁</div><h3>Opportunités</h3><p>Découvrez des pistes professionnelles structurées par métier, secteur et région.</p><a class="text-link" href="#opportunites">Explorer →</a></article>
-      <article class="card"><span class="num">04</span><div class="iconbox">✓</div><h3>Parcours structuré</h3><p>Chaque étape est expliquée pour vous permettre d'avancer avec une meilleure visibilité.</p><a class="text-link" href="#parcours">Voir le parcours →</a></article>
-    </div>
-  </div>
-</section>
-
-<section class="section soft" id="questionnaire">
-  <div class="container assess">
-    <div class="assess-box">
-      <span class="label">Évaluation en ligne</span>
-      <h2>Commencez par comprendre votre profil.</h2>
-      <p>
-        Répondez à quelques questions sur votre parcours. L'évaluation sert à
-        orienter votre réflexion et à identifier les pistes correspondant aux informations fournies.
-      </p>
-      <div class="assess-features">
-        <div class="assess-feature"><i>✓</i> Questionnaire en plusieurs étapes</div>
-        <div class="assess-feature"><i>✓</i> Parcours simple et rapide</div>
-        <div class="assess-feature"><i>✓</i> Orientation personnalisée</div>
-        <div class="assess-feature"><i>✓</i> Données traitées avec attention</div>
-      </div>
-      <br>
-      <button class="btn btn-primary" onclick="openAssessment()">Commencer l'évaluation →</button>
-    </div>
-
-    <div class="assess-info">
-      <div class="heading">
-        <span class="label">Une méthode simple</span>
-        <h2>De votre profil à votre <span>prochaine étape.</span></h2>
-        <p>Le questionnaire n'est pas une décision d'immigration. Il constitue une première orientation à partir des informations que vous fournissez.</p>
-      </div>
-      <div class="steps">
-        <div class="step"><div class="step-no">01</div><div><h3>Votre situation</h3><p>Pays de résidence, âge et situation générale.</p></div></div>
-        <div class="step"><div class="step-no">02</div><div><h3>Votre parcours</h3><p>Formation, métier, expérience et compétences.</p></div></div>
-        <div class="step"><div class="step-no">03</div><div><h3>Votre projet</h3><p>Langues, disponibilité, secteur et objectifs.</p></div></div>
-        <div class="step"><div class="step-no">04</div><div><h3>Votre orientation</h3><p>Une première sélection de pistes et de services à explorer.</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="opportunites">
-  <div class="container">
-    <div class="opps-head">
-      <div class="heading">
-        <span class="label">Opportunités au Canada</span>
-        <h2>Des métiers concrets, des missions claires et des revenus indicatifs.</h2>
-        <p>Les montants indiqués sont des fourchettes mensuelles brutes à titre informatif. Le salaire réel dépend de la province, de l'employeur, de l'expérience, des qualifications et du contrat proposé.</p>
-      </div>
-      <a class="btn btn-outline" href="#questionnaire">Évaluer mon profil</a>
-    </div>
-
-    <div class="filters">
-      <button class="filter active" data-filter="all">Tous les métiers</button>
-      <button class="filter" data-filter="tech">Technologie</button>
-      <button class="filter" data-filter="sante">Santé</button>
-      <button class="filter" data-filter="construction">Construction</button>
-      <button class="filter" data-filter="transport">Transport</button>
-      <button class="filter" data-filter="services">Services</button>
-    </div>
-
-    <div class="jobs">
-      <article class="job job-detailed" data-cat="tech">
-        <div class="job-top"><span class="job-tag">TECHNOLOGIE</span><span>01</span></div>
-        <h3>Développeur web</h3>
-        <p>Concevoir, améliorer et maintenir des sites et applications web pour des entreprises canadiennes.</p>
-        <div class="job-info"><b>Revenu mensuel indicatif</b><strong>3 900 à 6 000 $ CAD</strong><span>≈ 2 600 à 4 000 €</span></div>
-        <div class="job-meta"><span>HTML, CSS, JS</span><span>Expérience</span><span>Français / anglais</span></div>
-        <a href="#contact">Demander les conditions <span>→</span></a>
-      </article>
-
-      <article class="job job-detailed" data-cat="sante">
-        <div class="job-top"><span class="job-tag">SANTÉ</span><span>02</span></div>
-        <h3>Préposé aux bénéficiaires</h3>
-        <p>Accompagner les personnes âgées ou dépendantes, participer aux soins quotidiens et assurer leur confort.</p>
-        <div class="job-info"><b>Revenu mensuel indicatif</b><strong>3 200 à 4 500 $ CAD</strong><span>≈ 2 130 à 3 000 €</span></div>
-        <div class="job-meta"><span>Formation requise</span><span>Expérience</span><span>Province</span></div>
-        <a href="#contact">Demander les conditions <span>→</span></a>
-      </article>
-
-      <article class="job job-detailed" data-cat="construction">
-        <div class="job-top"><span class="job-tag">CONSTRUCTION</span><span>03</span></div>
-        <h4>Électricien</h4>
-        <p>Installer, entretenir et réparer des systèmes électriques sur des chantiers résidentiels, commerciaux ou industriels.</p>
-        <div class="job-info"><b>Revenu mensuel indicatif</b><strong>4 200 à 6 500 $ CAD</strong><span>≈ 2 800 à 4 330 €</span></div>
-        <div class="job-meta"><span>Qualification</span><span>Expérience</span><span>Normes locales</span></div>
-        <a href="#contact">Demander les conditions <span>→</span></a>
-      </article>
-
-      <article class="job job-detailed" data-cat="construction">
-        <div class="job-top"><span class="job-tag">CONSTRUCTION</span><span>04</span></div>
-        <h3>Soudeur</h3>
-        <p>Assembler et réparer des pièces métalliques en utilisant les procédés de soudage adaptés aux exigences du chantier.</p>
-        <div class="job-info"><b>Revenu mensuel indicatif</b><strong>3 800 à 5 800 $ CAD</strong><span>≈ 2 530 à 3 870 €</span></div>
-        <div class="job-meta"><span>Soudage</span><span>Expérience</span><span>Sécurité</span></div>
-        <a href="#contact">Demander les conditions <span>→</span></a>
-      </article>
-
-      <article class="job job-detailed" data-cat="transport">
-        <div class="job-top"><span class="job-tag">TRANSPORT</span><span>05</span></div>
-        <h3>Chauffeur poids lourd</h3>
-        <p>Transporter des marchandises sur des trajets locaux ou interprovinciaux, contrôler le véhicule et respecter les règles de sécurité.</p>
-        <div class="job-info"><b>Revenu mensuel indicatif</b><strong>4 000 à 6 200 $ CAD</strong><span>≈ 2 670 à 4 130 €</span></div>
-        <div class="job-meta"><span>Permis adapté</span><span>Expérience</span><span>Sécurité routière</span></div>
-        <a href="#contact">Demander les conditions <span>→</span></a>
-      </article>
-
-      <article class="job job-detailed" data-cat="services">
-        <div class="job-top"><span class="job-tag">SERVICES</span><span>06</span></div>
-        <h3>Cuisinier</h3>
-        <p>Préparer les plats, organiser le poste de travail, respecter les normes d'hygiène et participer au service.</p>
-        <div class="job-info"><b>Revenu mensuel indicatif</b><strong>3 000 à 4 300 $ CAD</strong><span>≈ 2 000 à 2 870 €</span></div>
-        <div class="job-meta"><span>Cuisine</span><span>Expérience</span><span>Hygiène</span></div>
-        <a href="#contact">Demander les conditions <span>→</span></a>
-      </article>
-
-      <article class="job job-detailed" data-cat="services">
-        <div class="job-top"><span class="job-tag">SERVICES</span><span>07</span></div>
-        <h3>Serveur en restauration</h3>
-        <p>Accueillir les clients, prendre les commandes, assurer le service et maintenir une expérience client de qualité.</p>
-        <div class="job-info"><b>Revenu mensuel indicatif</b><strong>2 700 à 3 800 $ CAD</strong><span>≈ 1 800 à 2 530 €</span></div>
-        <div class="job-meta"><span>Service client</span><span>Langues</span><span>Disponibilité</span></div>
-        <a href="#contact">Demander les conditions <span>→</span></a>
-      </article>
-
-      <article class="job job-detailed" data-cat="tech">
-        <div class="job-top"><span class="job-tag">NUMÉRIQUE</span><span>08</span></div>
-        <h4>Technicien support informatique</h4>
-        <p>Installer les équipements, assister les utilisateurs, diagnostiquer les incidents et assurer le support quotidien.</p>
-        <div class="job-info"><b>Revenu mensuel indicatif</b><strong>3 500 à 5 200 $ CAD</strong><span>≈ 2 330 à 3 470 €</span></div>
-        <div class="job-meta"><span>Support IT</span><span>Réseaux</span><span>Communication</span></div>
-        <a href="#contact">Demander les conditions <span>→</span></a>
-      </article>
-    </div>
-
-    <div class="notice-box">
-      <strong>À savoir avant de candidater</strong>
-      <p>Une opportunité d'emploi ne constitue pas une garantie d'embauche ni une garantie d'obtention d'un permis. Les postes, salaires et conditions doivent être vérifiés avec l'employeur et les autorités compétentes avant tout engagement.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section process" id="parcours">
-  <div class="container">
-    <div class="heading">
-      <span class="label">Comment ça marche</span>
-      <h3>Un parcours lisible, <span>étape par étape.</span></h3>
-      <p>Chaque dossier est différent. Les étapes exactes et les délais dépendent du profil, du programme et des autorités compétentes.</p>
-    </div>
-
-    <div class="process-grid">
-      <div class="process-step"><div class="circle">01</div><h3>Évaluer</h3><p>Présentez votre profil et votre projet.</p></div>
-      <div class="process-step"><div class="circle">02</div><h3>Analyser</h3><p>Identifiez les pistes adaptées aux informations fournies.</p></div>
-      <div class="process-step"><div class="circle">03</div><h3>Choisir</h3><p>Sélectionnez le niveau d'accompagnement souhaité.</p></div>
-      <div class="process-step"><div class="circle">04</div><h3>Préparer</h3><p>Organisez les prochaines étapes et les documents nécessaires.</p></div>
-      <div class="process-step"><div class="circle">05</div><h3>Suivre</h3><p>Avancez avec un suivi structuré de votre parcours.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="offres">
-  <div class="container">
-    <div class="heading center">
-      <h2 class="label">Accompagnement</h2>
-      <h3>Deux parcours selon votre capacité de financement.</h3>
-      <p>OC adapte l'accompagnement à votre situation financière et professionnelle. Les conditions définitives sont précisées dans le contrat signé avant toute prestation.</p>
-    </div>
-
-    <div class="plans">
-      <article class="plan featured">
-        <span class="plan-badge">CANDIDAT FINANCÉ</span>
-        <h3>Accompagnement complet</h3>
-        <div class="price"><strong>500 €</strong><span>≈ 585 $ US</span></div>
-        <p>Pour les candidats disposant déjà des moyens nécessaires et souhaitant être accompagnés dans leur parcours.</p>
-        <ul>
-          <li>Évaluation et orientation du profil</li>
-          <li>Préparation et organisation du dossier</li>
-          <li>Accompagnement administratif selon le mandat</li>
-          <li>Orientation vers les opportunités d'emploi disponibles</li>
-          <li>Suivi du parcours jusqu'aux prochaines étapes convenues</li>
-        </ul>
-        <a class="btn btn-primary" href="#contact">Demander l'accompagnement</a>
-      </article>
-
-      <article class="plan">
-        <span class="plan-badge">CANDIDAT À ACCOMPAGNER</span>
-        <h3>Parcours avec engagement financier</h3>
-        <div class="price"><strong>Sur étude</strong><span>Conditions contractuelles</span></div>
-        <p>Pour les travailleurs qui ne disposent pas immédiatement des moyens de financement. L'agence peut étudier un accompagnement avec engagement écrit de remboursement.</p>
-        <ul>
-          <li>Étude du profil et de la faisabilité</li>
-          <li>Définition des dépenses prises en charge par l'agence</li>
-          <li>Contrat détaillant les montants engagés</li>
-          <li>Échéancier de remboursement défini avant signature</li>
-          <li>Durée maximale prévue au contrat : deux ans</li>
-        </ul>
-        <a class="btn btn-outline" href="#contact">Étudier mon dossier</a>
-      </article>
-    </div>
-
-    <div class="commitment-box">
-      <h3>Emploi, permis et logement : un accompagnement coordonné</h3>
-      <p>Opportunité Canada travaille avec des partenaires pour faciliter l'accès aux démarches liées à l'emploi, au permis de travail et au logement lorsque ces prestations sont disponibles pour le profil concerné. Les éléments réellement pris en charge, les conditions, les partenaires et les responsabilités de chaque partie doivent être indiqués dans le contrat. Aucune décision d'une autorité publique ne peut être garantie par l'agence.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section soft" id="temoignages">
-  <div class="container">
-    <div class="heading center">
-      <h2 class="label">Témoignages</h2>
-      <h3>Des expériences présentées avec authenticité.</h3>
-      <p>Les textes ci-dessous sont des modèles de contenu destinés à la maquette. Ils devront être remplacés par de vrais témoignages, vrais noms, vraies photos et vraies vidéos après autorisation écrite des bénéficiaires.</p>
-    </div>
-
-    <h2 class="subsection-title">Témoignages écrits</h2>
-    <div class="testimonials testimonial-grid-5">
-      <article class="testimonial"><div class="stars">★★★★★</div><blockquote>« l'équipe m'a aidé à comprendre les étapes de mon projet et à mieux préparer mon dossier. J'ai apprécié la clarté des explications. »</blockquote><div class="person"><div class="avatar">AM</div><div><b>Amadou M.</b><span>Technicien informatique · Sénégal</span></div></div></article>
-      <article class="testimonial"><div class="stars">★★★★★</div><blockquote>« j'ai été orientée vers des opportunités correspondant à mon expérience. L'accompagnement m'a permis d'organiser mes documents plus sereinement. »</blockquote><div class="person"><div class="avatar">CN</div><div><b>Carine N.</b><span>Préposée aux soins · Bénin</span></div></div></article>
-      <article class="testimonial"><div class="stars">★★★★★</div><blockquote>« j'avais beaucoup de questions sur le travail au Canada. Les échanges m'ont permis de mieux comprendre les conditions avant de prendre une décision. »</blockquote><div class="person"><div class="avatar">KD</div><div><b>Koffi D.</b><span>Soudeur · Togo</span></div></div></article>
-      <article class="testimonial"><div class="stars">★★★★★</div><blockquote>« le suivi de mon projet était structuré. J'ai surtout apprécié le fait de connaître les documents et les prochaines étapes à préparer. »</blockquote><div class="person"><div class="avatar">FS</div><div><b>Fatou S.</b><span>Cuisinière · Côte d'Ivoire</span></div></div></article>
-      <article class="testimonial"><div class="stars">★★★★★</div><blockquote>« l'équipe a pris le temps d'étudier mon profil professionnel et de m'expliquer les possibilités qui pouvaient correspondre à mon expérience. »</blockquote><div class="person"><div class="avatar">JP</div><div><b>Jean P.</b><span>Chauffeur · Cameroun</span></div></div></article>
-    </div>
-
-    <h2 class="subsection-title">Témoignages photo</h2>
-
-<div class="photo-testimonials-grid">
-
-  <article class="photo-testimonial-card">
-    <img src="canada1.png" alt="Témoignage d'un candidat au Canada">
-    <div class="photo-testimonial-content">
-      <h3>Expérience d'un candidat</h3>
-      <p>Nom · Métier · Pays</p>
-      <p class="testimonial-text">
-        Une expérience très positive qui m'a permis de mieux préparer
-        mon projet professionnel et de concrétiser mon parcours vers le Canada.
-      </p>
-    </div>
-  </article>
-
-  <article class="photo-testimonial-card">
-    <img src="canada1.png" alt="Témoignage d'une candidate au Canada">
-    <div class="photo-testimonial-content">
-      <h3>Une nouvelle opportunité</h3>
-      <p>Nom · Métier · Pays</p>
-      <p class="testimonial-text">
-        L'accompagnement m'a permis de mieux comprendre les différentes
-        étapes et d'avancer sereinement dans mon projet.
-      </p>
-    </div>
-  </article>
-
-  <article class="photo-testimonial-card">
-    <img src="canada1.png" alt="Parcours professionnel au Canada">
-    <div class="photo-testimonial-content">
-      <h3>Parcours professionnel</h3>
-      <p>Nom · Métier · Pays</p>
-      <p class="testimonial-text">
-        Grâce à cet accompagnement, j'ai pu structurer mon projet et
-        mieux préparer mon installation.
-      </p>
-    </div>
-  </article>
-
-  <article class="photo-testimonial-card">
-    <img src="canada1.png" alt="Projet Canada">
-    <div class="photo-testimonial-content">
-      <h3>Projet Canada</h3>
-      <p>Nom · Métier · Pays</p>
-      <p class="testimonial-text">
-        Un accompagnement professionnel et des conseils utiles pour
-        avancer étape par étape vers mon objectif.
-      </p>
-    </div>
-  </article>
-
-  <article class="photo-testimonial-card">
-    <img src="canada1.png" alt="Retour d'expérience Canada">
-    <div class="photo-testimonial-content">
-      <h3>Retour d'expérience</h3>
-      <p>Nom · Métier · Pays</p>
-      <p class="testimonial-text">
-        Une belle expérience qui m'a permis de gagner en confiance
-        et de mieux préparer mon projet.
-      </p>
-    </div>
-  </article>
-
-</div>
-
-  <!-- =========================================
-     TÉMOIGNAGES VIDÉO
-========================================= -->
-
-<h2 class="subsection-title">Témoignages vidéo</h2>
-
-<div class="video-grid">
-
-  <!-- VIDÉO 01 -->
-  <article class="video-card">
-    <div class="video-container">
-      <video controls preload="metadata" playsinline>
-        <source src="vidcn1.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la lecture vidéo.
-      </video>
-    </div>
-
-    <div class="video-content">
-      <h3>Expérience d'un candidat</h3>
-      <p>Nom · Métier · Pays</p>
-    </div>
-  </article>
-
-
-  <!-- VIDÉO 02 -->
-  <article class="video-card">
-    <div class="video-container">
-      <video controls preload="metadata" playsinline>
-        <source src="vidcn1.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la lecture vidéo.
-      </video>
-    </div>
-
-    <div class="video-content">
-      <h3>Expérience d'une candidate</h3>
-      <p>Nom · Métier · Pays</p>
-    </div>
-  </article>
-
-
-  <!-- VIDÉO 03 -->
-  <article class="video-card">
-    <div class="video-container">
-      <video controls preload="metadata" playsinline>
-        <source src="vidcn1.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la lecture vidéo.
-      </video>
-    </div>
-
-    <div class="video-content">
-      <h3>Parcours professionnel</h3>
-      <p>Nom · Métier · Pays</p>
-    </div>
-  </article>
-
-
-  <!-- VIDÉO 04 -->
-  <article class="video-card">
-    <div class="video-container">
-      <video controls preload="metadata" playsinline>
-        <source src="vidcn1.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la lecture vidéo.
-      </video>
-    </div>
-
-    <div class="video-content">
-      <h3>Projet Canada</h3>
-      <p>Nom · Métier · Pays</p>
-    </div>
-  </article>
-
-
-  <!-- VIDÉO 05 -->
-  <article class="video-card">
-    <div class="video-container">
-      <video controls preload="metadata" playsinline>
-        <source src="vidcn1.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la lecture vidéo.
-      </video>
-    </div>
-
-    <div class="video-content">
-      <h3>Retour d'expérience</h3>
-      <p>Nom · Métier · Pays</p>
-    </div>
-  </article>
-
-
-  <!-- VIDÉO 06 -->
-  <article class="video-card">
-    <div class="video-container">
-      <video controls preload="metadata" playsinline>
-        <source src="vidcn1.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la lecture vidéo.
-      </video>
-    </div>
-
-    <div class="video-content">
-      <h3>Accompagnement Canada</h3>
-      <p>Nom · Métier · Pays</p>
-    </div>
-  </article>
-
-
-  <!-- VIDÉO 07 -->
-  <article class="video-card">
-    <div class="video-container">
-      <video controls preload="metadata" playsinline>
-        <source src="vidcn1.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la lecture vidéo.
-      </video>
-    </div>
-
-    <div class="video-content">
-      <h3>Installation et parcours</h3>
-      <p>Nom · Métier · Pays</p>
-    </div>
-  </article>
-
-
-  <!-- VIDÉO 08 -->
-  <article class="video-card">
-    <div class="video-container">
-      <video controls preload="metadata" playsinline>
-        <source src="vidcn1.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la lecture vidéo.
-      </video>
-    </div>
-
-    <div class="video-content">
-      <h3>Une nouvelle étape</h3>
-      <p>Nom · Métier · Pays</p>
-    </div>
-  </article>
-
-
-  <!-- VIDÉO 09 -->
-  <article class="video-card">
-    <div class="video-container">
-      <video controls preload="metadata" playsinline>
-        <source src="vidcn1.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la lecture vidéo.
-      </video>
-    </div>
-
-    <div class="video-content">
-      <h3>Retour du bénéficiaire</h3>
-      <p>Nom · Métier · Pays</p>
-    </div>
-  </article>
-
-
-  <!-- VIDÉO 10 -->
-  <article class="video-card">
-    <div class="video-container">
-      <video controls preload="metadata" playsinline>
-        <source src="vidcn1.mp4" type="video/mp4">
-        Votre navigateur ne prend pas en charge la lecture vidéo.
-      </video>
-    </div>
-
-    <div class="video-content">
-      <h3>Expérience Opportunité Canada</h3>
-      <p>Nom · Métier · Pays</p>
-    </div>
-  </article>
-
-</div>
 
 </section>
 
-<section class="section" id="faq">
-  <div class="container">
-    <div class="heading center">
-      <h2 class="label">Questions fréquentes</h2>
-      <h3>Les réponses avant <span>votre décision.</span></h3>
-      <p>Une information claire permet de mieux comprendre le parcours avant tout engagement.</p>
+
+<!-- =========================
+     NOTICE
+========================= -->
+
+<section class="notice-section">
+
+    <div class="container">
+
+        <div class="notice-card">
+
+            <div class="notice-icon">
+                🇨🇦
+            </div>
+
+            <div>
+
+                <h2>
+                    Vous rêvez du Canada ?
+                </h2>
+
+                <p>
+                    Le projet présenté par Immigration CND prévoit
+                    un accompagnement dans les différentes étapes
+                    du parcours d'immigration.
+                </p>
+
+                <p>
+                    Les conditions, l'éligibilité, les frais et les
+                    modalités doivent être vérifiés avant toute
+                    démarche ou paiement.
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="faq-wrap">
-      <div class="faq">
-        <div class="faq-item"><button class="faq-q">Est-ce que vous garantissez l'obtention d'un visa ?<span>+</span></button><div class="faq-a">Non. Aucune agence ne peut garantir la décision d'une autorité gouvernementale. Le site doit présenter uniquement des services d'accompagnement et des informations vérifiables.</div></div>
-        <div class="faq-item"><button class="faq-q">Combien coûte l'accompagnement ?<span>+</span></button><div class="faq-a">Le prix dépend de la formule et du dossier. Les tarifs définitifs, ce qui est inclus et ce qui ne l'est pas doivent être communiqués avant toute signature ou paiement.</div></div>
-        <div class="faq-item"><button class="faq-q">Quels documents faut-il préparer ?<span>+</span></button><div class="faq-a">Les documents dépendent du profil et du programme concerné. Une liste personnalisée doit être communiquée après l'évaluation.</div></div>
-        <div class="faq-item"><button class="faq-q">Combien de temps dure une procédure ?<span>+</span></button><div class="faq-a">Les délais varient selon le programme, le profil et les autorités compétentes. OC ne doit afficher que des délais provenant de sources officielles ou clairement présentés comme indicatifs.</div></div>
-        <div class="faq-item"><button class="faq-q">Mes informations sont-elles confidentielles ?<span>+</span></button><div class="faq-a">Le questionnaire collecte des données personnelles. La version en production devra intégrer une politique de confidentialité conforme à la réglementation applicable ainsi qu'une gestion sécurisée des données.</div></div>
-        <div class="faq-item"><button class="faq-q">Puis-je payer en ligne ?<span>+</span></button><div class="faq-a">Oui, la version finale pourra intégrer une passerelle de paiement sécurisée. Le paiement réel nécessitera une intégration backend avec le prestataire choisi par l'agence.</div></div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<section class="section" id="contact">
-  <div class="container contact">
-    <div class="contact-info">
-      <h2 class="label">Parlons de votre projet</h2>
-      <h3>Une question ? Un projet ?</h3>
-      <p>Présentez-nous votre situation et votre objectif. L'équipe pourra ensuite vous orienter vers la prochaine étape appropriée.</p>
-      <div class="contact-list">
-        <div><i>☎</i><span>+229 XX XX XX XX</span></div>
-        <div><i>✉</i><span>contact@opportunitecanada.com</span></div>
-        <div><i>◉</i><span>WhatsApp · Disponible selon horaires</span></div>
-        <div><i>⌖</i><span>Adresse de l'agence à confirmer</span></div>
-      </div>
+
+<!-- =========================
+     QUICK ACTIONS
+========================= -->
+
+<section class="quick-actions">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                COMMENCEZ MAINTENANT
+            </span>
+
+            <h2>
+                Les étapes essentielles
+            </h2>
+
+            <p>
+                Accédez rapidement aux principales fonctionnalités
+                de la plateforme.
+            </p>
+
+        </div>
+
+
+        <div class="quick-grid">
+
+            <a href="#registration" class="quick-card">
+
+                <span class="quick-number">01</span>
+
+                <div>
+                    <h3>Inscription</h3>
+                    <p>
+                        Remplissez votre formulaire
+                        d'inscription en ligne.
+                    </p>
+                </div>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+
+            <a href="#jobs" class="quick-card">
+
+                <span class="quick-number">02</span>
+
+                <div>
+                    <h3>Choisir un emploi</h3>
+                    <p>
+                        Consultez les opportunités
+                        disponibles.
+                    </p>
+                </div>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+
+            <a href="#payment" class="quick-card">
+
+                <span class="quick-number">03</span>
+
+                <div>
+                    <h3>Paiement</h3>
+                    <p>
+                        Consultez les options de paiement
+                        proposées.
+                    </p>
+                </div>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+
+            <a href="https://wa.me/2290022335588"
+               target="_blank"
+               class="quick-card whatsapp-card">
+
+                <span class="quick-number">04</span>
+
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>
+                        Contactez-nous directement.
+                    </p>
+                </div>
+
+                <span class="arrow">→</span>
+
+            </a>
+
+        </div>
+
     </div>
 
-    <form class="form" id="contactForm">
-      <div class="heading"><h2 class="label">Contact</h2><h3>Parlez-nous de votre projet.</h3></div>
-      <div class="form-grid" style="margin-top:25px">
-        <div class="field"><label>Nom complet</label><input required type="text" placeholder="Votre nom"></div>
-        <div class="field"><label>Email</label><input required type="email" placeholder="vous@email.com"></div>
-        <div class="field"><label>Téléphone / WhatsApp</label><input type="tel" placeholder="+229 ..."></div>
-        <div class="field"><label>Pays de résidence</label><input type="text" placeholder="Votre pays"></div>
-        <div class="field full"><label>Votre message</label><textarea placeholder="Décrivez brièvement votre projet..."></textarea></div>
-      </div>
-      <button class="btn btn-primary" type="submit" style="margin-top:18px">Envoyer ma demande →</button>
-      <p class="form-note">En production, ce formulaire devra être relié à un service d'envoi sécurisé et à une politique de confidentialité.</p>
-    </form>
-  </div>
 </section>
+
+
+<!-- =========================
+     REGISTRATION
+========================= -->
+
+<section class="registration section" id="registration">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                INSCRIPTION
+            </span>
+
+            <h2>
+                Commencez votre démarche
+            </h2>
+
+            <p>
+                Remplissez les informations ci-dessous avec
+                des informations exactes.
+            </p>
+
+        </div>
+
+
+        <div class="registration-layout">
+
+            <div class="registration-info">
+
+                <div class="info-card">
+
+                    <span class="info-icon">01</span>
+
+                    <h3>
+                        Remplissez le formulaire
+                    </h3>
+
+                    <p>
+                        Indiquez vos informations personnelles,
+                        votre situation et l'emploi recherché.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-icon">02</span>
+
+                    <h3>
+                        Sélectionnez votre emploi
+                    </h3>
+
+                    <p>
+                        Consultez les emplois disponibles
+                        et sélectionnez celui qui vous intéresse.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-icon">03</span>
+
+                    <h3>
+                        Préparez vos documents
+                    </h3>
+
+                    <p>
+                        Préparez votre pièce d'identité,
+                        passeport et CV si disponibles.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form class="registration-form" id="registrationForm">
+
+                <div class="form-header">
+
+                    <span class="form-label">
+                        FORMULAIRE
+                    </span>
+
+                    <h3>
+                        Informations du candidat
+                    </h3>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="nom">
+                            Nom *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nom"
+                            name="nom"
+                            required
+                            placeholder="Votre nom">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="prenom">
+                            Prénom *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="prenom"
+                            name="prenom"
+                            required
+                            placeholder="Votre prénom">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="sexe">
+                            Sexe *
+                        </label>
+
+                        <select id="sexe" name="sexe" required>
+
+                            <option value="">
+                                Sélectionner
+                            </option>
+
+                            <option value="Masculin">
+                                Masculin
+                            </option>
+
+                            <option value="Feminin">
+                                Féminin
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Gmail *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="exemple@gmail.com">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Date de naissance *
+                    </label>
+
+                    <div class="date-grid">
+
+                        <select id="jour" required>
+
+                            <option value="">
+                                Jour
+                            </option>
+
+                        </select>
+
+
+                        <select id="mois" required>
+
+                            <option value="">
+                                Mois
+                            </option>
+
+                            <option value="01">Janvier</option>
+                            <option value="02">Février</option>
+                            <option value="03">Mars</option>
+                            <option value="04">Avril</option>
+                            <option value="05">Mai</option>
+                            <option value="06">Juin</option>
+                            <option value="07">Juillet</option>
+                            <option value="08">Août</option>
+                            <option value="09">Septembre</option>
+                            <option value="10">Octobre</option>
+                            <option value="11">Novembre</option>
+                            <option value="12">Décembre</option>
+
+                        </select>
+
+
+                        <select id="annee" required>
+
+                            <option value="">
+                                Année
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="pays">
+                            Pays *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="pays"
+                            name="pays"
+                            required
+                            placeholder="Votre pays">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="ville">
+                            Ville *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="ville"
+                            name="ville"
+                            required
+                            placeholder="Votre ville">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="emploi">
+                        Quel travail souhaitez-vous faire au Canada ? *
+                    </label>
+
+                    <select id="emploi" name="emploi" required>
+
+                        <option value="">
+                            Sélectionnez un emploi
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Vous voyagez seul ou en famille ? *
+                    </label>
+
+                    <div class="radio-group">
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="voyage"
+                                value="Seul"
+                                required>
+
+                            <span>Seul</span>
+
+                        </label>
+
+
+                        <label class="radio-option">
+
+                            <input
+                                type="radio"
+                                name="voyage"
+                                value="En famille">
+
+                            <span>En famille</span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="whatsapp">
+                        Numéro WhatsApp *
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="whatsapp"
+                        name="whatsapp"
+                        required
+                        placeholder="Ex : +229XXXXXXXX">
+
+                    <small>
+                        Indiquez votre numéro avec l'indicatif
+                        international.
+                    </small>
+
+                </div>
+
+
+                <div class="documents">
+
+                    <h4>
+                        Documents
+                    </h4>
+
+
+                    <div class="file-group">
+
+                        <label for="identite">
+                            Photo de votre pièce d'identité
+                        </label>
+
+                        <input
+                            type="file"
+                            id="identite"
+                            name="identite"
+                            accept="image/*,.pdf">
+
+                        <small>
+                            CNI, CIP ou autre document d'identité.
+                        </small>
+
+                    </div>
+
+
+                    <div class="file-group">
+
+                        <label for="passeport">
+                            Photo de votre passeport
+                        </label>
+
+                        <input
+                            type="file"
+                            id="passeport"
+                            name="passeport"
+                            accept="image/*,.pdf">
+
+                        <small>
+                            Facultatif si vous n'en avez pas.
+                        </small>
+
+                    </div>
+
+
+                    <div class="file-group">
+
+                        <label for="cv">
+                            Photo de votre CV
+                        </label>
+
+                        <input
+                            type="file"
+                            id="cv"
+                            name="cv"
+                            accept="image/*,.pdf,.doc,.docx">
+
+                        <small>
+                            Facultatif si vous n'en avez pas.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-submit">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary btn-full">
+
+                        Envoyer mon inscription
+                        <span>→</span>
+
+                    </button>
+
+                    <p class="form-note">
+                        * Champs obligatoires
+                    </p>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAYMENT
+========================= -->
+
+<section class="payment section" id="payment">
+
+    <div class="container">
+
+        <div class="payment-box">
+
+            <div class="payment-content">
+
+                <span class="eyebrow">
+                    PAIEMENT
+                </span>
+
+                <h2>
+                    Procédez au paiement
+                    si vous êtes éligible
+                </h2>
+
+                <p>
+                    Consultez les options de paiement présentées
+                    par la plateforme avant toute transaction.
+                </p>
+
+            </div>
+
+
+            <div class="payment-options">
+
+                <a
+                    href="https://new.sebpay.bj/pay/frais-dinscription-BeJawS"
+                    target="_blank"
+                    class="payment-card">
+
+                    <div class="payment-icon">
+                        FCFA
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Frais d'inscription
+                        </span>
+
+                        <strong>
+                            48 200 F
+                        </strong>
+
+                    </div>
+
+                    <span class="payment-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="https://new.sebpay.bj/pay/frais-dinscription-jrGPg9"
+                    target="_blank"
+                    class="payment-card">
+
+                    <div class="payment-icon">
+                        USD
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Frais d'inscription
+                        </span>
+
+                        <strong>
+                            85 USD
+                        </strong>
+
+                    </div>
+
+                    <span class="payment-arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services section" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                NOS SERVICES
+            </span>
+
+            <h2>
+                Un accompagnement à chaque étape
+            </h2>
+
+            <p>
+                Découvrez les différentes étapes proposées
+                pour votre projet.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+            <article class="service-card">
+
+                <span class="service-number">01</span>
+
+                <div class="service-icon">
+                    ✍️
+                </div>
+
+                <h3>
+                    Inscription et évaluation
+                </h3>
+
+                <p>
+                    Analyse de votre profil et conseils
+                    personnalisés pour votre projet.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <span class="service-number">02</span>
+
+                <div class="service-icon">
+                    📄
+                </div>
+
+                <h3>
+                    Préparation de dossier
+                </h3>
+
+                <p>
+                    Assistance dans la collecte et la
+                    vérification des documents requis.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <span class="service-number">03</span>
+
+                <div class="service-icon">
+                    📝
+                </div>
+
+                <h3>
+                    Soumission de la demande
+                </h3>
+
+                <p>
+                    Accompagnement dans la préparation
+                    des formulaires nécessaires.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <span class="service-number">04</span>
+
+                <div class="service-icon">
+                    🏡
+                </div>
+
+                <h3>
+                    Recherche de logement
+                </h3>
+
+                <p>
+                    Aide à la recherche d'un logement temporaire
+                    ou permanent avant l'arrivée.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <span class="service-number">05</span>
+
+                <div class="service-icon">
+                    ✈️
+                </div>
+
+                <h3>
+                    Billet et accueil
+                </h3>
+
+                <p>
+                    Organisation du voyage et accompagnement
+                    pour l'accueil à l'arrivée.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <span class="service-number">06</span>
+
+                <div class="service-icon">
+                    📞
+                </div>
+
+                <h3>
+                    Suivi et assistance
+                </h3>
+
+                <p>
+                    Assistance et informations tout au long
+                    de votre parcours.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about section" id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-image">
+
+            <div class="image-placeholder">
+
+                <span>🇨🇦</span>
+
+                <p>
+                    IMAGE À AJOUTER
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="eyebrow">
+                À PROPOS
+            </span>
+
+            <h2>
+                Immigration CND
+            </h2>
+
+            <p>
+                ImmigrationCND.com est une plateforme spécialisée
+                dans l'accompagnement des personnes souhaitant
+                immigrer au Canada.
+            </p>
+
+            <p>
+                Nous vous aidons à chaque étape du processus :
+                inscription en ligne, préparation des documents,
+                démarches administratives, recherche de logement,
+                réservation du billet et suivi personnalisé.
+            </p>
+
+
+            <div class="check-list">
+
+                <div>✓ Inscription en ligne</div>
+                <div>✓ Préparation des documents</div>
+                <div>✓ Démarches administratives</div>
+                <div>✓ Recherche de logement</div>
+                <div>✓ Réservation du billet</div>
+                <div>✓ Suivi personnalisé</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     JOBS
+========================= -->
+
+<section class="jobs section" id="jobs">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                OPPORTUNITÉS
+            </span>
+
+            <h2>
+                Les emplois disponibles
+            </h2>
+
+            <p>
+                Consultez les 30 opportunités présentées
+                sur la plateforme.
+            </p>
+
+        </div>
+
+
+        <div class="jobs-toolbar">
+
+            <div class="search-box">
+
+                <span>⌕</span>
+
+                <input
+                    type="search"
+                    id="jobSearch"
+                    placeholder="Rechercher un métier...">
+
+            </div>
+
+
+            <select id="salaryFilter">
+
+                <option value="all">
+                    Tous les salaires
+                </option>
+
+                <option value="25">
+                    À partir de 25 000 $
+                </option>
+
+                <option value="30">
+                    À partir de 30 000 $
+                </option>
+
+                <option value="35">
+                    À partir de 35 000 $
+                </option>
+
+                <option value="40">
+                    À partir de 40 000 $
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="jobs-grid" id="jobsGrid">
+            <!-- JS -->
+        </div>
+
+
+        <div class="jobs-empty" id="jobsEmpty">
+
+            <div>
+                🔎
+            </div>
+
+            <h3>
+                Aucun emploi trouvé
+            </h3>
+
+            <p>
+                Essayez une autre recherche.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     REVIEWS
+========================= -->
+
+<section class="reviews section" id="reviews">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                TÉMOIGNAGES
+            </span>
+
+            <h2>
+                Les expériences de nos clients
+            </h2>
+
+            <p>
+                Retrouvez ici les témoignages écrits et vidéos.
+            </p>
+
+        </div>
+
+
+        <div class="reviews-grid">
+
+            <article class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    « Grâce à Immigration CND, j'ai été accompagné
+                    dans les différentes étapes de mon projet.
+                    La procédure m'a été expliquée clairement. »
+                </p>
+
+                <div class="review-author">
+                    <div class="avatar">FB</div>
+
+                    <div>
+                        <strong>Fatou B.</strong>
+                        <span>Sénégal</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    « Je ne savais pas par où commencer.
+                    L'équipe m'a expliqué les documents
+                    nécessaires et les différentes étapes. »
+                </p>
+
+                <div class="review-author">
+                    <div class="avatar">JN</div>
+
+                    <div>
+                        <strong>Jean-Paul N.</strong>
+                        <span>Cameroun</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    « J'ai apprécié l'accompagnement et les
+                    informations reçues pendant ma démarche. »
+                </p>
+
+                <div class="review-author">
+                    <div class="avatar">AK</div>
+
+                    <div>
+                        <strong>Arnaud K.</strong>
+                        <span>Côte d'Ivoire</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    « J'ai été guidé dans la préparation de mon
+                    dossier et dans les différentes démarches. »
+                </p>
+
+                <div class="review-author">
+                    <div class="avatar">JD</div>
+
+                    <div>
+                        <strong>Jacques D.</strong>
+                        <span>Bénin</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    « L'équipe a répondu à mes questions et
+                    m'a aidée à mieux comprendre la procédure. »
+                </p>
+
+                <div class="review-author">
+                    <div class="avatar">MT</div>
+
+                    <div>
+                        <strong>Mariam T.</strong>
+                        <span>Burkina Faso</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    « J'ai reçu rapidement les informations dont
+                    j'avais besoin pour préparer mon dossier. »
+                </p>
+
+                <div class="review-author">
+                    <div class="avatar">KM</div>
+
+                    <div>
+                        <strong>Kevin M.</strong>
+                        <span>RDC</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    « L'accompagnement m'a permis de mieux
+                    organiser mon projet et mes documents. »
+                </p>
+
+                <div class="review-author">
+                    <div class="avatar">SD</div>
+
+                    <div>
+                        <strong>Samuel D.</strong>
+                        <span>Bénin</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    « Une équipe disponible pour répondre
+                    aux différentes questions concernant la démarche. »
+                </p>
+
+                <div class="review-author">
+                    <div class="avatar">CN</div>
+
+                    <div>
+                        <strong>Clarisse N.</strong>
+                        <span>Cameroun</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    « Les explications reçues m'ont permis de
+                    comprendre les différentes étapes du projet. »
+                </p>
+
+                <div class="review-author">
+                    <div class="avatar">IB</div>
+
+                    <div>
+                        <strong>Ibrahim B.</strong>
+                        <span>Togo</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    « J'ai apprécié la disponibilité et les
+                    informations communiquées pendant ma démarche. »
+                </p>
+
+                <div class="review-author">
+                    <div class="avatar">AM</div>
+
+                    <div>
+                        <strong>Awa M.</strong>
+                        <span>Sénégal</span>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- VIDEOS -->
+
+        <div class="video-reviews">
+
+            <div class="video-heading">
+
+                <span class="eyebrow">
+                    VIDÉOS
+                </span>
+
+                <h3>
+                    Témoignages vidéo
+                </h3>
+
+            </div>
+
+
+            <div class="video-grid">
+
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="vidcn1.mp4" type="video/mp4">
+                    </video>
+                    <h4>Témoignage vidéo 01</h4>
+                </div>
+
+
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="vidcn2.mp4" type="video/mp4">
+                    </video>
+                    <h4>Témoignage vidéo 02</h4>
+                </div>
+
+
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="vidcn3.mp4" type="video/mp4">
+                    </video>
+                    <h4>Témoignage vidéo 03</h4>
+                </div>
+
+
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="vidcn4.mp4" type="video/mp4">
+                    </video>
+                    <h4>Témoignage vidéo 04</h4>
+                </div>
+
+
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="vidcn5.mp4" type="video/mp4">
+                    </video>
+                    <h4>Témoignage vidéo 05</h4>
+                </div>
+
+
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="vidcn6.mp4" type="video/mp4">
+                    </video>
+                    <h4>Témoignage vidéo 06</h4>
+                </div>
+
+
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="vidcn7.mp4" type="video/mp4">
+                    </video>
+                    <h4>Témoignage vidéo 07</h4>
+                </div>
+
+
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="vidcn8.mp4" type="video/mp4">
+                    </video>
+                    <h4>Témoignage vidéo 08</h4>
+                </div>
+
+
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="vidcn9.mp4" type="video/mp4">
+                    </video>
+                    <h4>Témoignage vidéo 09</h4>
+                </div>
+
+
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="vidcn10.mp4" type="video/mp4">
+                    </video>
+                    <h4>Témoignage vidéo 10</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
-  <div class="container">
-    <h2>Votre projet mérite une démarche claire.</h2>
-    <p>Commencez par votre profil et découvrez les prochaines étapes à explorer avec Opportunité Canada.</p>
-    <button class="btn btn-primary" onclick="openAssessment()">Commencer mon évaluation →</button>
-  </div>
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div>
+
+                <span class="eyebrow">
+                    BESOIN D'INFORMATIONS ?
+                </span>
+
+                <h2>
+                    Une question sur votre projet ?
+                </h2>
+
+                <p>
+                    Contactez notre équipe directement sur WhatsApp.
+                </p>
+
+            </div>
+
+            <a
+                href="https://wa.me/2290022335588"
+                target="_blank"
+                class="btn btn-whatsapp">
+
+                <span class="whatsapp-logo">◉</span>
+
+                Contacter sur WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
 
 </main>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="#accueil"><span class="logo">OC</span><span class="brand-text"><b style="color:#fff">Opportunité</b><small>CANADA</small></span></a>
-        <p>Accompagnement et orientation pour les personnes qui souhaitent construire un projet professionnel au Canada.</p>
-      </div>
-      <div><div class="footer-title">Navigation</div><div class="footer-links"><a href="#approche">Notre approche</a><a href="#opportunites">Opportunités</a><a href="#parcours">Parcours</a><a href="#offres">Formules</a></div></div>
-      <div><div class="footer-title">Informations</div><div class="footer-links"><a href="#faq">FAQ</a><a href="#">Mentions légales</a><a href="#">CGV</a><a href="#">Confidentialité</a></div></div>
-      <div><div class="footer-title">Contact</div><div class="footer-links"><a href="#contact">Nous contacter</a><a href="#">WhatsApp</a><a href="#">Espace candidat</a></div></div>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="#home" class="logo">
+
+                <span class="logo-icon">
+                    🇨🇦
+                </span>
+
+                <span>
+                    Immigration
+                    <strong>CND</strong>
+                </span>
+
+            </a>
+
+            <p>
+                Votre partenaire pour votre projet
+                d'immigration au Canada.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Navigation
+            </h3>
+
+            <a href="#home">Accueil</a>
+            <a href="#jobs">Les emplois</a>
+            <a href="#services">Services</a>
+            <a href="#about">À propos</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Démarches
+            </h3>
+
+            <a href="#registration">
+                Inscription
+            </a>
+
+            <a href="#payment">
+                Paiement
+            </a>
+
+            <a href="#reviews">
+                Témoignages
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <a
+                href="https://wa.me/2290022335588"
+                target="_blank">
+
+                WhatsApp
+            </a>
+
+            <a href="mailto:info@immigrationcnd.com">
+                Email
+            </a>
+
+            <span>
+                Lundi – Samedi
+            </span>
+
+            <span>
+                9h – 22h
+            </span>
+
+        </div>
+
     </div>
-    <div class="footer-bottom"><span>© <span id="year"></span> Opportunité Canada. Tous droits réservés.</span><span>Les décisions d'immigration relèvent exclusivement des autorités compétentes.</span></div>
-  </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                © 2026 ImmigrationCND. Tous droits réservés.
+            </p>
+
+            <p>
+                Les informations présentées doivent être
+                vérifiées avant toute démarche ou paiement.
+            </p>
+
+        </div>
+
+    </div>
+
 </footer>
 
-<!-- QUESTIONNAIRE MODAL -->
-<div class="modal" id="assessmentModal">
-  <div class="modal-box">
-    <button class="close" onclick="closeModal('assessmentModal')">×</button>
-    <h2>Évaluez votre profil</h2>
-    <p class="intro">Quelques questions pour une première orientation.</p>
-    <div class="progress"><div class="progress-bar" id="progress"></div></div>
 
-    <div id="quiz">
-      <div class="q-step active" data-step="1">
-        <h3>Quel est votre principal objectif ?</h3>
-        <div class="q-options">
-          <button class="option">Travailler au Canada</button>
-          <button class="option">Immigrer avec ma famille</button>
-          <button class="option">Trouver une opportunité professionnelle</button>
-          <button class="option">Je souhaite d'abord être orienté</button>
-        </div>
-      </div>
-      <div class="q-step" data-step="2">
-        <h3>Quel est votre niveau d'expérience ?</h3>
-        <div class="q-options">
-          <button class="option">Débutant / moins de 2 ans</button>
-          <button class="option">2 à 5 ans</button>
-          <button class="option">5 à 10 ans</button>
-          <button class="option">Plus de 10 ans</button>
-        </div>
-      </div>
-      <div class="q-step" data-step="3">
-        <h3>Quel secteur correspond le mieux à votre profil ?</h3>
-        <div class="q-options">
-          <button class="option">Technologie / numérique</button>
-          <button class="option">Santé</button>
-          <button class="option">Construction / métiers techniques</button>
-          <button class="option">Transport / services / autre</button>
-        </div>
-      </div>
-      <div class="q-step" data-step="4">
-        <h3>Comment souhaitez-vous poursuivre ?</h3>
-        <div class="q-options">
-          <button class="option">Je suis prêt à avancer</button>
-          <button class="option">J'ai besoin d'accompagnement</button>
-          <button class="option">Je souhaite d'abord connaître mes possibilités</button>
-          <button class="option">Je ne sais pas encore</button>
-        </div>
-      </div>
-      <div class="q-actions">
-        <button class="btn btn-outline" id="prev" onclick="prevStep()">Retour</button>
-        <button class="btn btn-primary" id="next" onclick="nextStep()">Continuer →</button>
-      </div>
-    </div>
+<!-- =========================
+     WHATSAPP FLOAT
+========================= -->
 
-    <div class="result" id="result">
-      <div class="result-icon">✓</div>
-      <h3>Votre première orientation est prête.</h3>
-      <p>Cette démonstration indique comment le questionnaire pourra présenter une orientation. Dans la version finale, les règles de qualification seront définies avec l'agence et les données seront enregistrées dans une base sécurisée.</p>
-      <button class="btn btn-primary" onclick="closeModal('assessmentModal');document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Parler à l'équipe →</button>
-    </div>
-  </div>
+<a
+    href="https://wa.me/2290022335588"
+    target="_blank"
+    class="whatsapp-float"
+    aria-label="Contacter Immigration CND sur WhatsApp">
+
+    <span class="whatsapp-svg">
+
+        <svg
+            viewBox="0 0 32 32"
+            aria-hidden="true">
+
+            <path
+                d="M16 3C8.82 3 3 8.45 3 15.18c0 2.36.72 4.55 1.95 6.37L3.2 28.7l7.35-1.7A13.2 13.2 0 0 0 16 27.36c7.18 0 13-5.45 13-12.18S23.18 3 16 3Zm0 22.1c-1.95 0-3.78-.54-5.34-1.47l-.38-.22-4.36 1.01 1.03-4.04-.25-.4a9.74 9.74 0 0 1-1.5-5.2C5.2 9.42 10.05 5 16 5s10.8 4.42 10.8 9.86S21.95 25.1 16 25.1Zm5.93-7.3c-.32-.16-1.9-.93-2.2-1.03-.3-.1-.52-.16-.74.16-.22.32-.84 1.03-1.03 1.24-.19.22-.38.24-.7.08-.32-.16-1.35-.48-2.57-1.54-.95-.82-1.59-1.82-1.78-2.13-.19-.32-.02-.49.14-.65.15-.15.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.7 0 1.59 1.17 3.12 1.33 3.34.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.9-.78 2.17-1.54.27-.76.27-1.41.19-1.54-.08-.13-.3-.21-.62-.37Z"/>
+
+        </svg>
+
+    </span>
+
+</a>
+
+
+<div class="toast" id="toast">
+    Votre inscription a été préparée.
 </div>
 
-<!-- PAYMENT MODAL -->
-<div class="modal" id="paymentModal">
-  <div class="modal-box">
-    <button class="close" onclick="closeModal('paymentModal')">×</button>
-    <h2>Votre demande</h2>
-    <p class="intro" id="selectedPlan">Formule sélectionnée</p>
-
-    <div class="pay-grid">
-      <div class="pay-method selected"><b>Carte bancaire</b><span>Stripe · intégration à connecter en production</span></div>
-      <div class="pay-method"><b>PayPal</b><span>PayPal · intégration à connecter en production</span></div>
-    </div>
-
-    <div class="demo-note">
-      Démonstration frontend : aucun paiement réel n'est effectué ici. Pour un vrai paiement, il faudra connecter une passerelle sécurisée, un backend, les CGV, la politique de remboursement et les factures.
-    </div>
-
-    <form id="paymentForm" style="margin-top:20px">
-      <div class="form-grid">
-        <div class="field"><label>Nom complet</label><input required type="text" placeholder="Votre nom"></div>
-        <div class="field"><label>Email</label><input required type="email" placeholder="vous@email.com"></div>
-      </div>
-      <button class="btn btn-primary" style="width:100%;margin-top:18px" type="submit">Continuer vers le paiement sécurisé →</button>
-    </form>
-  </div>
-</div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
