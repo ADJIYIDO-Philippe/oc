@@ -752,158 +752,184 @@ if (annee) {
 
 if (registrationForm) {
 
-    registrationForm.addEventListener(
-        "submit",
-        async event => {
+    registrationForm.addEventListener("submit", async function (event) {
 
-            event.preventDefault();
+        event.preventDefault();
+
+        const submitButton = registrationForm.querySelector(
+            'button[type="submit"]'
+        );
+
+        const originalText = submitButton
+            ? submitButton.textContent
+            : "Envoyer mon inscription";
 
 
-            const submitButton =
-                registrationForm.querySelector(
-                    'button[type="submit"]'
+        try {
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = "Envoi en cours...";
+            }
+
+
+            /* =========================
+               FORM DATA
+            ========================= */
+
+            const formData = new FormData(registrationForm);
+
+
+            /* =========================
+               DATE DE NAISSANCE
+            ========================= */
+
+            const jour = document.getElementById("jour");
+            const mois = document.getElementById("mois");
+            const annee = document.getElementById("annee");
+
+
+            if (
+                jour &&
+                mois &&
+                annee &&
+                jour.value &&
+                mois.value &&
+                annee.value
+            ) {
+
+                const dateNaissance =
+                    `${jour.value}/${mois.value}/${annee.value}`;
+
+                formData.set(
+                    "date_naissance",
+                    dateNaissance
                 );
 
-
-            const originalText =
-                submitButton
-                    ? submitButton.textContent.trim()
-                    : "Envoyer mon inscription";
+            }
 
 
-            try {
+            /* =========================
+               ENVOI FORMSPREE
+            ========================= */
 
-                if (submitButton) {
+            const response = await fetch(
+                "https://formspree.io/f/xdeonble",
+                {
+                    method: "POST",
 
-                    submitButton.disabled =
-                        true;
+                    body: formData,
 
-                    submitButton.textContent =
-                        "Envoi en cours...";
-
+                    headers: {
+                        "Accept": "application/json"
+                    }
                 }
+            );
 
 
-                const formData =
-                    new FormData(
-                        registrationForm
-                    );
+            /* =========================
+               RÉPONSE FORMSPREE
+            ========================= */
+
+            const data =
+                await response.json().catch(() => null);
 
 
-                /*
-                   DATE DE NAISSANCE
-                */
-
-                const selectedDay =
-                    document.getElementById("jour");
-
-                const selectedMonth =
-                    document.getElementById("mois");
-
-                const selectedYear =
-                    document.getElementById("annee");
+            console.log(
+                "Réponse Formspree :",
+                response.status,
+                data
+            );
 
 
-                if (
-                    selectedDay &&
-                    selectedMonth &&
-                    selectedYear &&
-                    selectedDay.value &&
-                    selectedMonth.value &&
-                    selectedYear.value
-                ) {
+            /* =========================
+               SUCCÈS
+            ========================= */
 
-                    const dateNaissance =
-                        `${selectedDay.value}/${selectedMonth.value}/${selectedYear.value}`;
-
-
-                    formData.set(
-                        "date_naissance",
-                        dateNaissance
-                    );
-
-                }
-
-
-                /*
-                   ENVOI FORMSPREE
-                */
-
-                const response =
-                    await fetch(
-                        registrationForm.action,
-                        {
-                            method: "POST",
-                            body: formData,
-                            headers: {
-                                "Accept":
-                                    "application/json"
-                            }
-                        }
-                    );
-
-
-                if (response.ok) {
-
-                    showToast(
-                        "Votre formulaire a été envoyé avec succès."
-                    );
-
-
-                    console.log(
-                        "Formulaire envoyé avec succès à Formspree."
-                    );
-
-
-                    registrationForm.reset();
-
-                } else {
-
-                    const data =
-                        await response.json()
-                            .catch(() => null);
-
-
-                    console.error(
-                        "Erreur Formspree :",
-                        data
-                    );
-
-
-                    showToast(
-                        "Une erreur est survenue. Veuillez réessayer."
-                    );
-
-                }
-
-            } catch (error) {
-
-                console.error(
-                    "Erreur lors de l'envoi du formulaire :",
-                    error
-                );
-
+            if (response.ok) {
 
                 showToast(
-                    "Impossible d'envoyer le formulaire. Vérifiez votre connexion."
+                    "✅ Votre inscription a été envoyée avec succès."
                 );
 
-            } finally {
+                registrationForm.reset();
 
-                if (submitButton) {
+                return;
+            }
 
-                    submitButton.disabled =
-                        false;
 
-                    submitButton.textContent =
-                        originalText;
+            /* =========================
+               ERREUR
+            ========================= */
 
+            let errorMessage =
+                "❌ Une erreur est survenue.";
+
+
+            if (data && data.errors) {
+
+                const errors =
+                    data.errors
+                        .map(error => {
+
+                            return error.message ||
+                                   error.code ||
+                                   "Erreur inconnue";
+
+                        })
+                        .join(" | ");
+
+
+                if (errors) {
+                    errorMessage += " " + errors;
                 }
 
             }
 
+
+            console.error(
+                "Erreur Formspree :",
+                response.status,
+                data
+            );
+
+
+            showToast(
+                errorMessage
+            );
+
         }
-    );
+
+
+        catch (error) {
+
+            console.error(
+                "Erreur réseau :",
+                error
+            );
+
+
+            showToast(
+                "❌ Impossible de contacter Formspree. Vérifiez votre connexion."
+            );
+
+        }
+
+
+        finally {
+
+            if (submitButton) {
+
+                submitButton.disabled = false;
+
+                submitButton.textContent =
+                    originalText;
+
+            }
+
+        }
+
+    });
 
 }
 
