@@ -687,64 +687,104 @@ for (
 
 
 /* =========================================
-   FORM SUBMISSION
+   FORM SUBMISSION — FORMSPREE
 ========================================= */
 
 registrationForm.addEventListener(
     "submit",
-    event => {
+    async event => {
 
         event.preventDefault();
 
-
-        const formData =
-            new FormData(
-                registrationForm
+        const submitButton =
+            registrationForm.querySelector(
+                'button[type="submit"]'
             );
 
+        const originalText =
+            submitButton
+                ? submitButton.textContent
+                : "";
 
-        const nom =
-            formData.get("nom");
+        try {
 
-        const prenom =
-            formData.get("prenom");
-
-        const emploi =
-            formData.get("emploi");
-
-
-        console.log(
-            "Inscription :",
-            {
-                nom,
-                prenom,
-                emploi
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent =
+                    "Envoi en cours...";
             }
-        );
+
+            const formData =
+                new FormData(
+                    registrationForm
+                );
+
+            const response =
+                await fetch(
+                    registrationForm.action,
+                    {
+                        method: "POST",
+                        body: formData,
+                        headers: {
+                            "Accept":
+                                "application/json"
+                        }
+                    }
+                );
 
 
-        showToast(
-            "Votre formulaire est prêt à être envoyé."
-        );
+            if (response.ok) {
 
+                showToast(
+                    "Votre formulaire a été envoyé avec succès."
+                );
 
-        /*
-          IMPORTANT :
+                registrationForm.reset();
 
-          Ici il faudra connecter le formulaire
-          au véritable système d'envoi du client :
+                console.log(
+                    "Formulaire envoyé à Formspree avec succès."
+                );
 
-          - PHP
-          - Formspree
-          - EmailJS
-          - WordPress API
-          - backend personnalisé
-          - etc.
+            } else {
 
-          Le formulaire HTML seul ne peut pas
-          envoyer réellement les fichiers vers
-          le serveur.
-        */
+                const data =
+                    await response.json()
+                        .catch(() => null);
+
+                console.error(
+                    "Erreur Formspree :",
+                    data
+                );
+
+                showToast(
+                    "Une erreur est survenue. Veuillez réessayer."
+                );
+
+            }
+
+        } catch (error) {
+
+            console.error(
+                "Erreur lors de l'envoi :",
+                error
+            );
+
+            showToast(
+                "Impossible d'envoyer le formulaire. Vérifiez votre connexion."
+            );
+
+        } finally {
+
+            if (submitButton) {
+
+                submitButton.disabled = false;
+
+                submitButton.textContent =
+                    originalText;
+
+            }
+
+        }
 
     }
 );
