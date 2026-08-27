@@ -13,9 +13,9 @@ const jobs = [
     {
         id: 1,
         title: "Agent de sécurité",
-        salaryMin: 30000,
-        salaryMax: 50000,
-        salary: "30 000 $ à 50 000 $ / an",
+        salaryMin: 3500,
+        salaryMax: 6000,
+        salary: "3 500 $ à 6 000 $ / mois",
         description:
             "Veille à la sécurité des biens et des personnes, effectue des rondes et surveille les systèmes de sécurité."
     },
@@ -23,9 +23,9 @@ const jobs = [
     {
         id: 2,
         title: "Vendeur en magasin",
-        salaryMin: 25000,
-        salaryMax: 35000,
-        salary: "25 000 $ à 35 000 $ / an",
+        salaryMin: 3500,
+        salaryMax: 5000,
+        salary: " 3 500 $ à 6 000 $ / mois",
         description:
             "Assiste les clients, effectue des ventes et maintient l'ordre dans le magasin."
     },
@@ -33,9 +33,9 @@ const jobs = [
     {
         id: 3,
         title: "Assistant en soins de santé",
-        salaryMin: 35000,
-        salaryMax: 50000,
-        salary: "35 000 $ à 50 000 $ / an",
+        salaryMin: 8000,
+        salaryMax: 11000,
+        salary: "8 000 $ à 11 000 $ / mois",
         description:
             "Apporte un soutien aux professionnels de la santé dans les tâches liées aux soins des patients."
     },
@@ -43,9 +43,9 @@ const jobs = [
     {
         id: 4,
         title: "Préposé à l'entretien ménager",
-        salaryMin: 25000,
-        salaryMax: 35000,
-        salary: "25 000 $ à 35 000 $ / an",
+        salaryMin: 3500,
+        salaryMax: 60000,
+        salary: "3 500 $ à 6 000 $ / mois",
         description:
             "Effectue le nettoyage et l'entretien des espaces résidentiels ou commerciaux."
     },
@@ -53,9 +53,9 @@ const jobs = [
     {
         id: 5,
         title: "Caissier de supermarché",
-        salaryMin: 25000,
-        salaryMax: 35000,
-        salary: "25 000 $ à 35 000 $ / an",
+        salaryMin: 5000,
+        salaryMax: 8000,
+        salary: "5 000 $ à 8 000 $ / mois",
         description:
             "Enregistre les achats des clients et traite les transactions de paiement."
     },
@@ -63,9 +63,9 @@ const jobs = [
     {
         id: 6,
         title: "Chauffeur livreur",
-        salaryMin: 30000,
-        salaryMax: 45000,
-        salary: "30 000 $ à 45 000 $ / an",
+        salaryMin: 50000,
+        salaryMax: 70000,
+        salary: "5 000 $ à 7 000 $ / mois",
         description:
             "Livre des marchandises ou des colis à des destinations spécifiées."
     },
@@ -73,9 +73,9 @@ const jobs = [
     {
         id: 7,
         title: "Serveur ou serveuse",
-        salaryMin: 25000,
-        salaryMax: 40000,
-        salary: "25 000 $ à 40 000 $ / an",
+        salaryMin: 3500,
+        salaryMax: 6000,
+        salary: "3 500 $ à 6 000 $ / mois",
         description:
             "Prend les commandes, sert les clients et assure une expérience agréable dans les restaurants ou cafés."
     },
@@ -83,9 +83,9 @@ const jobs = [
     {
         id: 8,
         title: "Aide-cuisinier",
-        salaryMin: 25000,
-        salaryMax: 35000,
-        salary: "25 000 $ à 35 000 $ / an",
+        salaryMin: 3500,
+        salaryMax: 5000,
+        salary: "3 500 $ à 5 000 $ / mois",
         description:
             "Assiste les chefs cuisiniers dans la préparation des repas et l'organisation de la cuisine."
     },
@@ -93,9 +93,9 @@ const jobs = [
     {
         id: 9,
         title: "Technicien de maintenance",
-        salaryMin: 35000,
-        salaryMax: 50000,
-        salary: "35 000 $ à 50 000 $ / an",
+        salaryMin: 8000,
+        salaryMax: 11000,
+        salary: "8 000 $ à 11 000 $ / mois",
         description:
             "Effectue la maintenance préventive et corrective des équipements et installations."
     },
@@ -103,9 +103,9 @@ const jobs = [
     {
         id: 10,
         title: "Coiffeur ou coiffeuse",
-        salaryMin: 25000,
-        salaryMax: 40000,
-        salary: "25 000 $ à 40 000 $ / an",
+        salaryMin: 4000,
+        salaryMax: 7000,
+        salary: "4 000 $ à 7 000 $ / an",
         description:
             "Coupe, coiffe et entretient les cheveux des clients dans les salons de coiffure."
     },
@@ -113,9 +113,9 @@ const jobs = [
     {
         id: 11,
         title: "Assistant en garderie",
-        salaryMin: 25000,
-        salaryMax: 40000,
-        salary: "25 000 $ à 40 000 $ / an",
+        salaryMin: 3500,
+        salaryMax: 6000,
+        salary: "3 500 $ à 6 000 $ / mois",
         description:
             "Fournit des soins aux enfants, organise des activités éducatives et assure leur sécurité."
     },
@@ -123,9 +123,9 @@ const jobs = [
     {
         id: 12,
         title: "Éboueur",
-        salaryMin: 28000,
-        salaryMax: 40000,
-        salary: "28 000 $ à 40 000 $ / an",
+        salaryMin: 4000,
+        salaryMax: 7000,
+        salary: "4 000 $ à 7 000 $ / mois",
         description:
             "Collecte les déchets et assure le nettoyage des espaces publics."
     },
@@ -133,9 +133,9 @@ const jobs = [
     {
         id: 13,
         title: "Technicien informatique",
-        salaryMin: 35000,
-        salaryMax: 55000,
-        salary: "35 000 $ à 55 000 $ / an",
+        salaryMin: 7000,
+        salaryMax: 10000,
+        salary: "7 000 $ à 10 000 $ / mois",
         description:
             "Fournit une assistance technique aux utilisateurs, résout les problèmes informatiques et assure le support technique."
     },
@@ -143,9 +143,9 @@ const jobs = [
     {
         id: 14,
         title: "Assistant de pharmacie",
-        salaryMin: 30000,
-        salaryMax: 45000,
-        salary: "30 000 $ à 45 000 $ / an",
+        salaryMin: 4000,
+        salaryMax: 6000,
+        salary: "4 000 $ à 6 000 $ / mois",
         description:
             "Soutient les pharmaciens dans la distribution des médicaments et l'accueil des clients."
     },
@@ -153,9 +153,9 @@ const jobs = [
     {
         id: 15,
         title: "Aide-menuisier",
-        salaryMin: 28000,
-        salaryMax: 40000,
-        salary: "28 000 $ à 40 000 $ / an",
+        salaryMin: 3500,
+        salaryMax: 6000,
+        salary: "3 500 $ à 6 000 $ / mois",
         description:
             "Assiste les menuisiers dans la fabrication, l'assemblage et l'installation de structures en bois."
     },
@@ -163,9 +163,9 @@ const jobs = [
     {
         id: 16,
         title: "Aide-jardinier",
-        salaryMin: 25000,
-        salaryMax: 35000,
-        salary: "25 000 $ à 35 000 $ / an",
+        salaryMin: 4000,
+        salaryMax: 6000,
+        salary: "4 000 $ à 6 000 $ / mois",
         description:
             "Soutient les jardiniers dans l'entretien des espaces verts, la plantation et l'aménagement paysager."
     },
@@ -173,9 +173,9 @@ const jobs = [
     {
         id: 17,
         title: "Assistant en photographie",
-        salaryMin: 30000,
-        salaryMax: 45000,
-        salary: "30 000 $ à 45 000 $ / an",
+        salaryMin: 4000,
+        salaryMax: 7000,
+        salary: "4 000 $ à 7 000 $ / mois",
         description:
             "Soutient les photographes dans la préparation du matériel, l'éclairage et la prise de vue."
     },
@@ -183,9 +183,9 @@ const jobs = [
     {
         id: 18,
         title: "Technicien d'entretien de véhicules",
-        salaryMin: 30000,
-        salaryMax: 50000,
-        salary: "30 000 $ à 50 000 $ / an",
+        salaryMin: 4000,
+        salaryMax: 7000,
+        salary: "4 000 $ à 7 000 $ / mois",
         description:
             "Effectue l'entretien courant des véhicules, les réparations et les diagnostics mécaniques."
     },
@@ -193,9 +193,9 @@ const jobs = [
     {
         id: 19,
         title: "Aide-maçon",
-        salaryMin: 30000,
-        salaryMax: 45000,
-        salary: "30 000 $ à 45 000 $ / an",
+        salaryMin: 4000,
+        salaryMax: 6000,
+        salary: "4 000 $ à 6 000 $ / mois",
         description:
             "Assiste les maçons professionnels dans les travaux de construction, de briques et de préparation des matériaux."
     },
@@ -203,9 +203,9 @@ const jobs = [
     {
         id: 20,
         title: "Footballeur",
-        salaryMin: 28000,
-        salaryMax: 40000,
-        salary: "28 000 $ à 40 000 $ / an",
+        salaryMin: 7000,
+        salaryMax: 11000,
+        salary: "7 000 $ à 11 000 $ / mois",
         description:
             "Participe à des formations de football et peut évoluer dans des équipes ou structures sportives."
     },
@@ -216,9 +216,9 @@ const jobs = [
     {
         id: 21,
         title: "Manutentionnaire",
-        salaryMin: 28000,
-        salaryMax: 42000,
-        salary: "28 000 $ à 42 000 $ / an",
+        salaryMin: 5000,
+        salaryMax: 8000,
+        salary: "5 000 $ à 8 000 $ / mois",
         description:
             "Manipule, déplace et organise les marchandises dans les entrepôts et centres logistiques."
     },
@@ -226,9 +226,9 @@ const jobs = [
     {
         id: 22,
         title: "Préposé d'entrepôt",
-        salaryMin: 30000,
-        salaryMax: 45000,
-        salary: "30 000 $ à 45 000 $ / an",
+        salaryMin: 4000,
+        salaryMax: 7000,
+        salary: "4 000 $ à 7 000 $ / mois",
         description:
             "Participe à la réception, au rangement, à la préparation et à l'expédition des marchandises."
     },
@@ -236,9 +236,9 @@ const jobs = [
     {
         id: 23,
         title: "Employé de restaurant",
-        salaryMin: 25000,
-        salaryMax: 38000,
-        salary: "25 000 $ à 38 000 $ / an",
+        salaryMin: 4000,
+        salaryMax: 7000,
+        salary: "4 000 $ à 7 000 $ / mois",
         description:
             "Participe aux activités quotidiennes d'un restaurant et assure le service aux clients."
     },
@@ -246,9 +246,9 @@ const jobs = [
     {
         id: 24,
         title: "Aide-électricien",
-        salaryMin: 30000,
-        salaryMax: 45000,
-        salary: "30 000 $ à 45 000 $ / an",
+        salaryMin: 5000,
+        salaryMax: 8000,
+        salary: "5 000 $ à 8 000 $ / mois",
         description:
             "Assiste les professionnels dans l'installation, l'entretien et la réparation des équipements électriques."
     },
@@ -256,9 +256,9 @@ const jobs = [
     {
         id: 25,
         title: "Peintre en bâtiment",
-        salaryMin: 30000,
-        salaryMax: 48000,
-        salary: "30 000 $ à 48 000 $ / an",
+        salaryMin: 4000,
+        salaryMax: 7000,
+        salary: "4 000 $ à 7 000 $ / mois",
         description:
             "Prépare les surfaces et réalise des travaux de peinture dans des bâtiments résidentiels ou commerciaux."
     },
@@ -266,9 +266,9 @@ const jobs = [
     {
         id: 26,
         title: "Ouvrier agricole",
-        salaryMin: 28000,
-        salaryMax: 42000,
-        salary: "28 000 $ à 42 000 $ / an",
+        salaryMin: 5000,
+        salaryMax: 8000,
+        salary: "5 000 $ à 8 000 $ / mois",
         description:
             "Participe aux travaux agricoles, à l'entretien des cultures et aux opérations de récolte."
     },
@@ -276,9 +276,9 @@ const jobs = [
     {
         id: 27,
         title: "Assistant administratif",
-        salaryMin: 32000,
-        salaryMax: 48000,
-        salary: "32 000 $ à 48 000 $ / an",
+        salaryMin: 7000,
+        salaryMax: 10000,
+        salary: "7 000 $ à 10 000 $ / mois",
         description:
             "Assure des tâches administratives, la gestion de documents et l'organisation quotidienne."
     },
@@ -286,9 +286,9 @@ const jobs = [
     {
         id: 28,
         title: "Chauffeur de camion",
-        salaryMin: 40000,
-        salaryMax: 60000,
-        salary: "40 000 $ à 60 000 $ / an",
+        salaryMin: 6000,
+        salaryMax: 10000,
+        salary: "6 000 $ à 10 000 $ / mois",
         description:
             "Transporte des marchandises et assure les livraisons selon les itinéraires prévus."
     },
@@ -296,9 +296,9 @@ const jobs = [
     {
         id: 29,
         title: "Soudeur",
-        salaryMin: 35000,
-        salaryMax: 55000,
-        salary: "35 000 $ à 55 000 $ / an",
+        salaryMin: 3500,
+        salaryMax: 6000,
+        salary: "3 500 $ à 4 000 $ / mois",
         description:
             "Assemble et répare des pièces métalliques en utilisant différents procédés de soudage."
     },
@@ -306,9 +306,9 @@ const jobs = [
     {
         id: 30,
         title: "Opérateur de production",
-        salaryMin: 30000,
-        salaryMax: 48000,
-        salary: "30 000 $ à 48 000 $ / an",
+        salaryMin: 4000,
+        salaryMax: 7000,
+        salary: "4 000 $ à 7 000 $ / mois",
         description:
             "Travaille sur une ligne de production et participe au contrôle et à la fabrication des produits."
     }
