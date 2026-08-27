@@ -302,10 +302,7 @@
      REGISTRATION
 ========================= -->
 
-<form class="registration-form" id="registrationForm"
-      action="https://formspree.io/f/xdeonble"
-      method="POST"
-      enctype="multipart/form-data">
+<section class="registration-form" id="registration">
 
     <div class="container">
 
@@ -381,7 +378,11 @@
             </div>
 
 
-            <form class="registration-form" id="registrationForm">
+            <form class="registration-form"
+                  id="registrationForm"
+                  action="https://formspree.io/f/xdeonble"
+                  method="POST"
+                  enctype="multipart/form-data">
 
                 <div class="form-header">
 
@@ -440,7 +441,10 @@
                             Sexe *
                         </label>
 
-                        <select id="sexe" name="sexe" required>
+                        <select
+                            id="sexe"
+                            name="sexe"
+                            required>
 
                             <option value="">
                                 Sélectionner
@@ -485,7 +489,10 @@
 
                     <div class="date-grid">
 
-                        <select id="jour" required>
+                        <select
+                            id="jour"
+                            name="jour"
+                            required>
 
                             <option value="">
                                 Jour
@@ -494,29 +501,70 @@
                         </select>
 
 
-                        <select id="mois" required>
+                        <select
+                            id="mois"
+                            name="mois"
+                            required>
 
                             <option value="">
                                 Mois
                             </option>
 
-                            <option value="01">Janvier</option>
-                            <option value="02">Février</option>
-                            <option value="03">Mars</option>
-                            <option value="04">Avril</option>
-                            <option value="05">Mai</option>
-                            <option value="06">Juin</option>
-                            <option value="07">Juillet</option>
-                            <option value="08">Août</option>
-                            <option value="09">Septembre</option>
-                            <option value="10">Octobre</option>
-                            <option value="11">Novembre</option>
-                            <option value="12">Décembre</option>
+                            <option value="01">
+                                Janvier
+                            </option>
+
+                            <option value="02">
+                                Février
+                            </option>
+
+                            <option value="03">
+                                Mars
+                            </option>
+
+                            <option value="04">
+                                Avril
+                            </option>
+
+                            <option value="05">
+                                Mai
+                            </option>
+
+                            <option value="06">
+                                Juin
+                            </option>
+
+                            <option value="07">
+                                Juillet
+                            </option>
+
+                            <option value="08">
+                                Août
+                            </option>
+
+                            <option value="09">
+                                Septembre
+                            </option>
+
+                            <option value="10">
+                                Octobre
+                            </option>
+
+                            <option value="11">
+                                Novembre
+                            </option>
+
+                            <option value="12">
+                                Décembre
+                            </option>
 
                         </select>
 
 
-                        <select id="annee" required>
+                        <select
+                            id="annee"
+                            name="annee"
+                            required>
 
                             <option value="">
                                 Année
@@ -571,7 +619,10 @@
                         Quel travail souhaitez-vous faire au Canada ? *
                     </label>
 
-                    <select id="emploi" name="emploi" required>
+                    <select
+                        id="emploi"
+                        name="emploi"
+                        required>
 
                         <option value="">
                             Sélectionnez un emploi
@@ -598,7 +649,9 @@
                                 value="Seul"
                                 required>
 
-                            <span>Seul</span>
+                            <span>
+                                Seul
+                            </span>
 
                         </label>
 
@@ -610,7 +663,9 @@
                                 name="voyage"
                                 value="En famille">
 
-                            <span>En famille</span>
+                            <span>
+                                En famille
+                            </span>
 
                         </label>
 
@@ -660,7 +715,7 @@
                             accept="image/*,.pdf">
 
                         <small>
-                            CNI,  ou autre document d'identité.
+                            CNI, ou autre document d'identité.
                         </small>
 
                     </div>
