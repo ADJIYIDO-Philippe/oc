@@ -24,7 +24,7 @@ const jobs = [
         id: 2,
         title: "Vendeur en magasin",
         salaryMin: 3500,
-        salaryMax: 5000,
+        salaryMax: 6000,
         salary: "3 500 $ à 6 000 $ / mois",
         description:
             "Assiste les clients, effectue des ventes et maintient l'ordre dans le magasin."
@@ -294,7 +294,7 @@ const jobs = [
         id: 29,
         title: "Soudeur",
         salaryMin: 3500,
-        salaryMax: 6000,
+        salaryMax: 4000,
         salary: "3 500 $ à 4 000 $ / mois",
         description:
             "Assemble et répare des pièces métalliques en utilisant différents procédés de soudage."
@@ -417,11 +417,6 @@ function renderJobs(list = jobs) {
 function populateJobSelect() {
 
     if (!jobSelect) return;
-
-    /*
-       On conserve la première option
-       "Sélectionnez un emploi".
-    */
 
     jobs.forEach(job => {
 
@@ -610,10 +605,6 @@ function applyTheme(theme) {
 }
 
 
-/* =========================================
-   MODE CLAIR PAR DÉFAUT
-========================================= */
-
 const savedTheme =
     localStorage.getItem("cnd-theme");
 
@@ -703,10 +694,6 @@ const annee =
     document.getElementById("annee");
 
 
-/* =========================================
-   JOURS
-========================================= */
-
 if (jour) {
 
     for (
@@ -730,10 +717,6 @@ if (jour) {
 
 }
 
-
-/* =========================================
-   ANNÉES
-========================================= */
 
 if (annee) {
 
@@ -790,11 +773,6 @@ if (registrationForm) {
 
             try {
 
-                /*
-                   Désactivation du bouton
-                   pendant l'envoi.
-                */
-
                 if (submitButton) {
 
                     submitButton.disabled =
@@ -806,11 +784,6 @@ if (registrationForm) {
                 }
 
 
-                /*
-                   Récupération de tous les champs
-                   + fichiers.
-                */
-
                 const formData =
                     new FormData(
                         registrationForm
@@ -818,24 +791,17 @@ if (registrationForm) {
 
 
                 /*
-                   Création automatique d'un
-                   champ date complet.
+                   DATE DE NAISSANCE
                 */
 
                 const selectedDay =
-                    document.getElementById(
-                        "jour"
-                    );
+                    document.getElementById("jour");
 
                 const selectedMonth =
-                    document.getElementById(
-                        "mois"
-                    );
+                    document.getElementById("mois");
 
                 const selectedYear =
-                    document.getElementById(
-                        "annee"
-                    );
+                    document.getElementById("annee");
 
 
                 if (
@@ -860,7 +826,7 @@ if (registrationForm) {
 
 
                 /*
-                   Envoi vers Formspree.
+                   ENVOI FORMSPREE
                 */
 
                 const response =
@@ -877,11 +843,6 @@ if (registrationForm) {
                     );
 
 
-                /*
-                   Formspree a accepté
-                   la demande.
-                */
-
                 if (response.ok) {
 
                     showToast(
@@ -894,31 +855,9 @@ if (registrationForm) {
                     );
 
 
-                    /*
-                       Réinitialisation du formulaire
-                       après succès.
-                    */
-
                     registrationForm.reset();
 
-
-                    /*
-                       Retour du bouton à son état normal.
-                    */
-
-                    if (submitButton) {
-
-                        submitButton.textContent =
-                            "Envoyer mon inscription";
-
-                    }
-
                 } else {
-
-                    /*
-                       Tentative de récupération
-                       du message d'erreur Formspree.
-                    */
 
                     const data =
                         await response.json()
@@ -950,10 +889,6 @@ if (registrationForm) {
                 );
 
             } finally {
-
-                /*
-                   Réactivation du bouton.
-                */
 
                 if (submitButton) {
 
