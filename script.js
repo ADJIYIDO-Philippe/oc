@@ -1,5 +1,5 @@
 /* =========================================
-   IMMIGRATION CND
+   VISION CANADA CHRISTIAN YOPA
    JAVASCRIPT
 ========================================= */
 
@@ -25,7 +25,7 @@ const jobs = [
         title: "Vendeur en magasin",
         salaryMin: 3500,
         salaryMax: 5000,
-        salary: " 3 500 $ à 6 000 $ / mois",
+        salary: "3 500 $ à 6 000 $ / mois",
         description:
             "Assiste les clients, effectue des ventes et maintient l'ordre dans le magasin."
     },
@@ -44,7 +44,7 @@ const jobs = [
         id: 4,
         title: "Préposé à l'entretien ménager",
         salaryMin: 3500,
-        salaryMax: 60000,
+        salaryMax: 6000,
         salary: "3 500 $ à 6 000 $ / mois",
         description:
             "Effectue le nettoyage et l'entretien des espaces résidentiels ou commerciaux."
@@ -63,8 +63,8 @@ const jobs = [
     {
         id: 6,
         title: "Chauffeur livreur",
-        salaryMin: 50000,
-        salaryMax: 70000,
+        salaryMin: 5000,
+        salaryMax: 7000,
         salary: "5 000 $ à 7 000 $ / mois",
         description:
             "Livre des marchandises ou des colis à des destinations spécifiées."
@@ -105,7 +105,7 @@ const jobs = [
         title: "Coiffeur ou coiffeuse",
         salaryMin: 4000,
         salaryMax: 7000,
-        salary: "4 000 $ à 7 000 $ / an",
+        salary: "4 000 $ à 7 000 $ / mois",
         description:
             "Coupe, coiffe et entretient les cheveux des clients dans les salons de coiffure."
     },
@@ -209,9 +209,6 @@ const jobs = [
         description:
             "Participe à des formations de football et peut évoluer dans des équipes ou structures sportives."
     },
-
-
-    /* 10 EMPLOIS SUPPLÉMENTAIRES */
 
     {
         id: 21,
@@ -348,16 +345,22 @@ const toast =
 
 function renderJobs(list = jobs) {
 
+    if (!jobsGrid) return;
+
     jobsGrid.innerHTML = "";
 
     if (list.length === 0) {
 
-        jobsEmpty.style.display = "block";
+        if (jobsEmpty) {
+            jobsEmpty.style.display = "block";
+        }
 
         return;
     }
 
-    jobsEmpty.style.display = "none";
+    if (jobsEmpty) {
+        jobsEmpty.style.display = "none";
+    }
 
 
     list.forEach(job => {
@@ -395,7 +398,7 @@ function renderJobs(list = jobs) {
                 data-job="${job.title}">
 
                 Choisir cet emploi →
-                
+
             </button>
 
         `;
@@ -413,12 +416,20 @@ function renderJobs(list = jobs) {
 
 function populateJobSelect() {
 
+    if (!jobSelect) return;
+
+    /*
+       On conserve la première option
+       "Sélectionnez un emploi".
+    */
+
     jobs.forEach(job => {
 
         const option =
             document.createElement("option");
 
-        option.value = job.title;
+        option.value =
+            job.title;
 
         option.textContent =
             `${job.title} — ${job.salary}`;
@@ -435,6 +446,8 @@ function populateJobSelect() {
 ========================================= */
 
 function filterJobs() {
+
+    if (!jobSearch || !salaryFilter) return;
 
     const search =
         jobSearch.value
@@ -481,48 +494,76 @@ function filterJobs() {
    SELECT JOB
 ========================================= */
 
-jobsGrid.addEventListener(
-    "click",
-    event => {
+if (jobsGrid) {
 
-        const button =
-            event.target.closest(".job-select");
+    jobsGrid.addEventListener(
+        "click",
+        event => {
 
-        if (!button) return;
+            const button =
+                event.target.closest(".job-select");
 
-        const selectedJob =
-            button.dataset.job;
+            if (!button) return;
 
-        jobSelect.value =
-            selectedJob;
+            const selectedJob =
+                button.dataset.job;
 
-        document
-            .getElementById("registration")
-            .scrollIntoView({
-                behavior: "smooth"
-            });
 
-        showToast(
-            `Emploi sélectionné : ${selectedJob}`
-        );
+            if (jobSelect) {
 
-    }
-);
+                jobSelect.value =
+                    selectedJob;
+
+            }
+
+
+            const registration =
+                document.getElementById(
+                    "registration"
+                );
+
+
+            if (registration) {
+
+                registration.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+
+            showToast(
+                `Emploi sélectionné : ${selectedJob}`
+            );
+
+        }
+    );
+
+}
 
 
 /* =========================================
    SEARCH EVENTS
 ========================================= */
 
-jobSearch.addEventListener(
-    "input",
-    filterJobs
-);
+if (jobSearch) {
 
-salaryFilter.addEventListener(
-    "change",
-    filterJobs
-);
+    jobSearch.addEventListener(
+        "input",
+        filterJobs
+    );
+
+}
+
+
+if (salaryFilter) {
+
+    salaryFilter.addEventListener(
+        "change",
+        filterJobs
+    );
+
+}
 
 
 /* =========================================
@@ -542,7 +583,9 @@ function applyTheme(theme) {
 
         document.body.classList.add("dark");
 
-        themeIcon.textContent = "☀️";
+        if (themeIcon) {
+            themeIcon.textContent = "☀️";
+        }
 
         localStorage.setItem(
             "cnd-theme",
@@ -553,7 +596,9 @@ function applyTheme(theme) {
 
         document.body.classList.remove("dark");
 
-        themeIcon.textContent = "🌙";
+        if (themeIcon) {
+            themeIcon.textContent = "🌙";
+        }
 
         localStorage.setItem(
             "cnd-theme",
@@ -565,9 +610,9 @@ function applyTheme(theme) {
 }
 
 
-/*
+/* =========================================
    MODE CLAIR PAR DÉFAUT
-*/
+========================================= */
 
 const savedTheme =
     localStorage.getItem("cnd-theme");
@@ -579,21 +624,28 @@ applyTheme(
 );
 
 
-themeToggle.addEventListener(
-    "click",
-    () => {
+if (themeToggle) {
 
-        const isDark =
-            document.body.classList.contains("dark");
+    themeToggle.addEventListener(
+        "click",
+        () => {
 
-        applyTheme(
-            isDark
-                ? "light"
-                : "dark"
-        );
+            const isDark =
+                document.body.classList.contains(
+                    "dark"
+                );
 
-    }
-);
+
+            applyTheme(
+                isDark
+                    ? "light"
+                    : "dark"
+            );
+
+        }
+    );
+
+}
 
 
 /* =========================================
@@ -607,31 +659,37 @@ const nav =
     document.getElementById("nav");
 
 
-menuToggle.addEventListener(
-    "click",
-    () => {
+if (menuToggle && nav) {
 
-        nav.classList.toggle("active");
+    menuToggle.addEventListener(
+        "click",
+        () => {
 
-    }
-);
+            nav.classList.toggle(
+                "active"
+            );
+
+        }
+    );
 
 
-nav.querySelectorAll("a")
-    .forEach(link => {
+    nav.querySelectorAll("a")
+        .forEach(link => {
 
-        link.addEventListener(
-            "click",
-            () => {
+            link.addEventListener(
+                "click",
+                () => {
 
-                nav.classList.remove(
-                    "active"
-                );
+                    nav.classList.remove(
+                        "active"
+                    );
 
-            }
-        );
+                }
+            );
 
-    });
+        });
+
+}
 
 
 /* =========================================
@@ -645,43 +703,62 @@ const annee =
     document.getElementById("annee");
 
 
-for (
-    let i = 1;
-    i <= 31;
-    i++
-) {
+/* =========================================
+   JOURS
+========================================= */
 
-    const option =
-        document.createElement("option");
+if (jour) {
 
-    option.value =
-        String(i).padStart(2, "0");
+    for (
+        let i = 1;
+        i <= 31;
+        i++
+    ) {
 
-    option.textContent = i;
+        const option =
+            document.createElement("option");
 
-    jour.appendChild(option);
+        option.value =
+            String(i).padStart(2, "0");
+
+        option.textContent =
+            i;
+
+        jour.appendChild(option);
+
+    }
 
 }
 
 
-const currentYear =
-    new Date().getFullYear();
+/* =========================================
+   ANNÉES
+========================================= */
+
+if (annee) {
+
+    const currentYear =
+        new Date().getFullYear();
 
 
-for (
-    let year = currentYear;
-    year >= 1940;
-    year--
-) {
+    for (
+        let year = currentYear;
+        year >= 1940;
+        year--
+    ) {
 
-    const option =
-        document.createElement("option");
+        const option =
+            document.createElement("option");
 
-    option.value = year;
+        option.value =
+            year;
 
-    option.textContent = year;
+        option.textContent =
+            year;
 
-    annee.appendChild(option);
+        annee.appendChild(option);
+
+    }
 
 }
 
@@ -690,104 +767,210 @@ for (
    FORM SUBMISSION — FORMSPREE
 ========================================= */
 
-registrationForm.addEventListener(
-    "submit",
-    async event => {
+if (registrationForm) {
 
-        event.preventDefault();
+    registrationForm.addEventListener(
+        "submit",
+        async event => {
 
-        const submitButton =
-            registrationForm.querySelector(
-                'button[type="submit"]'
-            );
+            event.preventDefault();
 
-        const originalText =
-            submitButton
-                ? submitButton.textContent
-                : "";
 
-        try {
-
-            if (submitButton) {
-                submitButton.disabled = true;
-                submitButton.textContent =
-                    "Envoi en cours...";
-            }
-
-            const formData =
-                new FormData(
-                    registrationForm
+            const submitButton =
+                registrationForm.querySelector(
+                    'button[type="submit"]'
                 );
 
-            const response =
-                await fetch(
-                    registrationForm.action,
-                    {
-                        method: "POST",
-                        body: formData,
-                        headers: {
-                            "Accept":
-                                "application/json"
+
+            const originalText =
+                submitButton
+                    ? submitButton.textContent.trim()
+                    : "Envoyer mon inscription";
+
+
+            try {
+
+                /*
+                   Désactivation du bouton
+                   pendant l'envoi.
+                */
+
+                if (submitButton) {
+
+                    submitButton.disabled =
+                        true;
+
+                    submitButton.textContent =
+                        "Envoi en cours...";
+
+                }
+
+
+                /*
+                   Récupération de tous les champs
+                   + fichiers.
+                */
+
+                const formData =
+                    new FormData(
+                        registrationForm
+                    );
+
+
+                /*
+                   Création automatique d'un
+                   champ date complet.
+                */
+
+                const selectedDay =
+                    document.getElementById(
+                        "jour"
+                    );
+
+                const selectedMonth =
+                    document.getElementById(
+                        "mois"
+                    );
+
+                const selectedYear =
+                    document.getElementById(
+                        "annee"
+                    );
+
+
+                if (
+                    selectedDay &&
+                    selectedMonth &&
+                    selectedYear &&
+                    selectedDay.value &&
+                    selectedMonth.value &&
+                    selectedYear.value
+                ) {
+
+                    const dateNaissance =
+                        `${selectedDay.value}/${selectedMonth.value}/${selectedYear.value}`;
+
+
+                    formData.set(
+                        "date_naissance",
+                        dateNaissance
+                    );
+
+                }
+
+
+                /*
+                   Envoi vers Formspree.
+                */
+
+                const response =
+                    await fetch(
+                        registrationForm.action,
+                        {
+                            method: "POST",
+                            body: formData,
+                            headers: {
+                                "Accept":
+                                    "application/json"
+                            }
                         }
+                    );
+
+
+                /*
+                   Formspree a accepté
+                   la demande.
+                */
+
+                if (response.ok) {
+
+                    showToast(
+                        "Votre formulaire a été envoyé avec succès."
+                    );
+
+
+                    console.log(
+                        "Formulaire envoyé avec succès à Formspree."
+                    );
+
+
+                    /*
+                       Réinitialisation du formulaire
+                       après succès.
+                    */
+
+                    registrationForm.reset();
+
+
+                    /*
+                       Retour du bouton à son état normal.
+                    */
+
+                    if (submitButton) {
+
+                        submitButton.textContent =
+                            "Envoyer mon inscription";
+
                     }
-                );
+
+                } else {
+
+                    /*
+                       Tentative de récupération
+                       du message d'erreur Formspree.
+                    */
+
+                    const data =
+                        await response.json()
+                            .catch(() => null);
 
 
-            if (response.ok) {
+                    console.error(
+                        "Erreur Formspree :",
+                        data
+                    );
 
-                showToast(
-                    "Votre formulaire a été envoyé avec succès."
-                );
 
-                registrationForm.reset();
+                    showToast(
+                        "Une erreur est survenue. Veuillez réessayer."
+                    );
 
-                console.log(
-                    "Formulaire envoyé à Formspree avec succès."
-                );
+                }
 
-            } else {
-
-                const data =
-                    await response.json()
-                        .catch(() => null);
+            } catch (error) {
 
                 console.error(
-                    "Erreur Formspree :",
-                    data
+                    "Erreur lors de l'envoi du formulaire :",
+                    error
                 );
+
 
                 showToast(
-                    "Une erreur est survenue. Veuillez réessayer."
+                    "Impossible d'envoyer le formulaire. Vérifiez votre connexion."
                 );
 
-            }
+            } finally {
 
-        } catch (error) {
+                /*
+                   Réactivation du bouton.
+                */
 
-            console.error(
-                "Erreur lors de l'envoi :",
-                error
-            );
+                if (submitButton) {
 
-            showToast(
-                "Impossible d'envoyer le formulaire. Vérifiez votre connexion."
-            );
+                    submitButton.disabled =
+                        false;
 
-        } finally {
+                    submitButton.textContent =
+                        originalText;
 
-            if (submitButton) {
-
-                submitButton.disabled = false;
-
-                submitButton.textContent =
-                    originalText;
+                }
 
             }
 
         }
+    );
 
-    }
-);
+}
 
 
 /* =========================================
@@ -799,12 +982,27 @@ let toastTimer;
 
 function showToast(message) {
 
-    toast.textContent = message;
+    if (!toast) {
 
-    toast.classList.add("show");
+        console.log(message);
+
+        return;
+
+    }
 
 
-    clearTimeout(toastTimer);
+    toast.textContent =
+        message;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    clearTimeout(
+        toastTimer
+    );
 
 
     toastTimer =
@@ -830,24 +1028,28 @@ const header =
     document.getElementById("header");
 
 
-window.addEventListener(
-    "scroll",
-    () => {
+if (header) {
 
-        if (window.scrollY > 30) {
+    window.addEventListener(
+        "scroll",
+        () => {
 
-            header.style.boxShadow =
-                "0 10px 30px rgba(15,23,42,.08)";
+            if (window.scrollY > 30) {
 
-        } else {
+                header.style.boxShadow =
+                    "0 10px 30px rgba(15,23,42,.08)";
 
-            header.style.boxShadow =
-                "none";
+            } else {
+
+                header.style.boxShadow =
+                    "none";
+
+            }
 
         }
+    );
 
-    }
-);
+}
 
 
 /* =========================================
@@ -860,5 +1062,5 @@ renderJobs();
 
 
 console.log(
-    "Immigration CND — site initialisé."
+    "Vision Canada Christian Yopa — site initialisé."
 );
